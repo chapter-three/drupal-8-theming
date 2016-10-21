@@ -1,6 +1,6 @@
 #### Drupal 8 Theming
 
-# Exercise 8: 
+# Exercise 8:
 
 ## Manipulating variables in the template
 
@@ -8,22 +8,22 @@ Look at the comments at the top of the node.html.twig template. The comments det
 
 ### Use `kint()` to inspect the content variable.
 
-1. Add `{{ kint(content) }}` to the bottom of your **node.twig.html field. 
+1. Add `{{ kint(content) }}` to the bottom of your **node.twig.html field.
 
-2. Inspect the content variable. Note that body and field_image are available. 
-        
+2. Inspect the content variable. Note that body and field_image are available.
+
     _Make sure your php memory limit is high (> 256) or you may see a white screen of death._
-    
+
 
 ### Print Content without certain fields.
 
 1. In **node.html.twig**, change ```{{ content }}``` to ```{{ content|without('field_tags') }}```
 
-2. View an article node page. Now all fields are printed except for the tags field. 
+2. View an article node page. Now all fields are printed except for the tags field.
 
 ### Print fields individually.
 
-1. Find ```{{ content | without('field_tags') }} ``` from the previous step and change it to ```{{ content | without {{'field_tags', 'body' }}``` 
+1. Find ```{{ content | without('field_tags') }} ``` from the previous step and change it to ```{{ content | without ('field_tags', 'body') }}```
 
     This removes the tags and the body fieds.
 
@@ -32,18 +32,18 @@ Look at the comments at the top of the node.html.twig template. The comments det
 
     ```
     <div class="sidebar">
-      {{ content.field_tags }} 
-      {{ content.body }} 
+      {{ content.field_tags }}
+      {{ content.body }}
     </div>
     ```
-    
+
     You should now see your Tags and Body fields inside a div with class `sidebar`.
 
 
 ### Explore.
-The `.` syntax in twig is a shorthand for a number of PHP methods and functions. Below is  a list of methods Twig will check in the order they will be checked in. 
+The `.` syntax in twig is a shorthand for a number of PHP methods and functions. Below is  a list of methods Twig will check in the order they will be checked in.
 
-1. Spend a few moments trying to print out variables and their children. 
+1. Spend a few moments trying to print out variables and their children.
 
 
     ```
