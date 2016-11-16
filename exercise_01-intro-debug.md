@@ -75,10 +75,10 @@ By the end of this workshop, participants should be able to understand and use c
 2. Uncomment the following lines in **settings.local.php**
 	
 	```
-	$settings['extension_discovery_scan_tests'] = TRUE;
+	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 	```
 	```
-	$settings['rebuild_access'] = TRUE;
+	$settings['cache']['bins']['render'] = 'cache.backend.null';
 	```
 2. Add the following to the bottom of **local.services.yml**
 	
