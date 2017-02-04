@@ -20,16 +20,17 @@ By the end of this workshop, participants should be able to understand and use c
 	**MYDRUPAL** should be the path to your drupal sites root directory. Make sure to adjust your terminal commands accordingly.
 	
 	```
-	$ chmod -Rf 775 MYDRUPAL/sites/default/
+	$ cd MYDRUPAL
+	$ chmod -Rf 775 sites/default/
 	```
 
 ### Allow local settings and services.
-3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-754 in Drupal 8.2.1):
+3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-754 in Drupal 8.2.6):
 
 	```
-	if (file_exists(__DIR__ . '/settings.local.php')) {
-		include __DIR__ . '/settings.local.php';
-	}
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }
 	```
 4. Copy the file **MYDRUPAL/sites/example.settings.local.php** to **MYDRUPAL/sites/default/settings.local.php** using the following terminal command, or through your display:
 
@@ -37,7 +38,15 @@ By the end of this workshop, participants should be able to understand and use c
 	$ cd MYDRUPAL
 	$ cp sites/example.settings.local.php sites/default/settings.local.php
 	```
-5. Locate the following line in **settings.local.php**:
+
+5. Create the **local.services.yml** file from **default.services.yml**. Copy the default file and rename it using the following terminal command, or through your display.
+	
+	```
+	$ cd MYDRUPAL
+	$ cp sites/default/default.services.yml sites/default/local.services.yml
+	```
+
+6. Locate the following line in **settings.local.php**:
 	
 	```
 	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
@@ -48,16 +57,6 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/local.services.yml';
 	```
-
-
-6. Create the **local.services.yml** file from **default.services.yml**. Copy the default file and rename it using the following terminal command, or through your display.
-	
-	```
-	$ cd MYDRUPAL
-	$ cp sites/default/default.services.yml sites/default/local.services.yml
-	```
-
-
 
 ### Disable caches and enable debuggging
 
@@ -80,12 +79,14 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 	$settings['cache']['bins']['render'] = 'cache.backend.null';
 	```
+	Note: Disabling the render cache is fine in the early stages of development but you'll wont to turn it on during testing.
+	
 2. Add the following to the bottom of **local.services.yml**
 	
 	```
 	services:
-  	  cache.backend.null:
-        class: Drupal\Core\Cache\NullBackendFactory
+    cache.backend.null:
+      class: Drupal\Core\Cache\NullBackendFactory
     ```
 
 ## Enable devel and kint debugging.
@@ -105,8 +106,6 @@ In .twig files:
 `{{ kint(VARIABLE_NAME) }}` (works but may produce error)
 `{{ dsm(VARIABLE_NAME) }}`
 `<pre>{{ dump(VARIABLE_NAME) }}</pre>`
-
-
 
 ## Enable Admin Toolbar
 1. To get admin_menu-like drop-downs on hover, download and enable the Admin Toolbar (admin_toolbar)  and Admin Toolbar Tools (admin_toobar_tools)mmodule. 
