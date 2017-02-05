@@ -10,8 +10,19 @@ As long as you have your .info.yml file in place with a few keys in place, you h
 
 ### Create the theme folder and "YaML" file
 1. Locate the _/themes_ folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level _/module_ and _/themes_ folders.
+
+
 2. Create a new folder and call it `acme`
+
+```bash
+$ cd MYDRUPAL
+$ mkdir themes/acme                 
+```
 3. In that folder create a new file. It should be called _acme.info.yml_
+
+```bash
+$ touch themes/acme/acme.info.yml
+```
 4. Add the following lines to that file
 
 	```
@@ -65,21 +76,21 @@ The human readable name will appear on the Appearance page, where you can activa
 	
 	```
 	libraries:
-		- THEMENAME/global-styling
-		- THEMENAME/LIBRARY-NAME
+	  - THEMENAME/global-styling
+	  - THEMENAME/LIBRARY-NAME
 	```
 Theme libraries contain css and/or javascript. Theme libraries are declared in another type of YaML file (THEME.libraries.yml). We will go over libraries in later exercises.
 
 3. The `libraries-override` and `libraries-extend` keys can be used to take control over the components of a library, remove items or the complete library, or add additional elements to a library.
 
-4. The `stylesheets-remove` and `stylesheets-override` key are used to stop the addition of css compontents for core and contrib modules or to introduce new versions of those components to those libraries. Similar to `libraries-override` and `libraries-extend` but specific to stylesheets.
+4. The `stylesheets-remove` key is used to stop the addition of css components for core and contrib modules However, It is better to do this with `libraries-override`.
 
 	```
 	stylesheets-remove:
       - core/assets/vendor/normalize-css/normalize.css
       - '@classy/css/components/tabs.css'
 	```
-	The stylesheets-remove key removes a link to a stylesheet added by another theme or module. The full path to CSS file should be provided (instead of just the filename), to accommodate cases where more than one file with the same name exists. In cases where a Drupal core asset is being removed (for example, a CSS file in jQuery UI) the full file path is needed. In cases where the file is part of a library that belongs to a module or theme, a token can be used. Note that when using the token it needs to be quoted because @ is a reserved indicator in YAML.
+	
 5. `ckeditor_stylesheets` will allow you to have custom ckeditor styles attached to your theme
 6. `quickedit_stylesheets` will allow you to have custom styles and javascript attached to the quickedit functionality
 

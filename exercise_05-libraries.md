@@ -25,7 +25,14 @@ In the following steps we will create a libraries.yml file, declare our library 
 
 1. Navigate to your theme's root directory 
 
+```bash
+$ cd MYDRUPAL
+```
 2. Create a file called **acme.libraries.yml** and open that file in your preferred code editor.
+
+```bash
+$ touch themes/acme/acme.libraries.yml
+```
 
 3. Add the following code to that file:
 	
@@ -40,11 +47,21 @@ In the following steps we will create a libraries.yml file, declare our library 
 
    ```
    
-   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to prefix with the name of the theme and some word(s) to describe what the library will do. A name like `acme-global` would be more accurate for this library, but I'm a free spirit and I like to run with scissors.
+   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to use some word(s) to describe what the library will do. A name like `global-styles` would be more accurate for this library, but I'm a free spirit and I like to run with scissors.
    
 4. Navigate back to your theme's root directory, and create a folder called **"css"** (if one doesn't already exist).
 
+```bash
+$ mkdir themes/acme/css
+```
 5. Create two files in that directory. One called `css-stuff.css` and one called `css-stuff-print.css`
+
+
+
+```bash
+$ touch themes/acme/css/css-stuff.css
+$ touch themes/acme/css/css-stuff-print.css
+```
 
 6. Open them both and **add any high level css you want**. For `css-stuff.css` you could add:
 
@@ -81,31 +98,43 @@ In the following steps we will create a libraries.yml file, declare our library 
 10. Clear your caches and you should now see your css styles in place.
 
 If everything worked, you should see output like the following in the head section on all pages of your theme.
-	
-    
-    @import url("/themes/acme/css/css-stuff.css?of7sd1");
-    ...
-    <style media="print">
-        @import url("/themes/acme/css/css-stuff-print.css?of7sd1");
-    </style>
-    
+
+```html
+@import url("/themes/acme/css/css-stuff.css?of7sd1");
+...
+<style media="print">
+    @import url("/themes/acme/css/css-stuff-print.css?of7sd1");
+</style>
+```
 
 ## Attach Library to a template
 In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page we should use the `attach_library()` function in twig to add js or css.
 
-1. Create a folder called `js` in your theme root and add a javascript file called **widget.js**
+1. Create a folder called `js` in your theme root and add a javascript file called **custom-widget.js**
 
-2. Create a `css` file in the **css** folder called **widget.css**.
+```bash
+$ mkdir themes/acme/js
+$ touch themes/acme/js/custom-widget.js
+
+```
+
+2. Create a `css` file in the **css** folder called **custom-widget.css**.
+
+```bash
+$ touch themes/acme/css/custom-widget.css
+
+```
+
 
 3. Add some sample css and js to each file: 
     
-    **widget.js:**
+    **custom-widget.js:**
     
     ```js
     console.log('It Works')
     ```
     
-    **widget.css:**
+    **custom-widget.css:**
     
     ```css
     article { 
@@ -119,10 +148,10 @@ In Drupal 8, it is recommended that libraries only be applied when needed. Unles
     widget:
       version: VERSION
       js:
-         js/widget.js: {}
+         js/custom-widget.js: {}
       css:
         theme:
-          css/widget.css: {} 
+          css/custom-widget.css: {} 
       dependencies:
          - core/drupal
          - core/jquery
@@ -131,6 +160,12 @@ In Drupal 8, it is recommended that libraries only be applied when needed. Unles
 1. Navigate to **MYDRUPAL/core/themes/classy/templates/content/** and look for `node.html.twig`. 
 
 2. Make a copy of node.html.twig and paste it in at **MYDRUPAL/themes/acme/templates/node** . 
+
+```bash 
+$ mkdir themes/acme/templates
+$ mkdir themes/acme/templates/node
+$ cp core/themes/classy/templates/content/node.html.twig themes/acme/templates/node/node.html.twig
+```
     
 4. Add the following to **node.html.twig** near the top
     
@@ -139,7 +174,7 @@ In Drupal 8, it is recommended that libraries only be applied when needed. Unles
       {{ attach_library('acme/widget') }}
     {% endif %}
     ```
-6. Verify that widget.js and widget.css have loaded on the article pages but NOT on basic pages.     
+6. Verify that custom-widget.js and custom-widget.css have loaded on the article pages but NOT on basic pages.     
 
 ## Overriding and Removing libraries
 
