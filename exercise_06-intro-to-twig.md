@@ -17,14 +17,16 @@ The double-curly-brace (`{{`) is always used to **print** something. If whatever
 
 + Print a variable
 
-  `{{ content }}` 
+  ```twig
+  {{ content }}
+  ``` 
 
 ###The “Do Something” Syntax: {% ... %}
 The curly-percent (`{%`) is the other syntax, which I call the “do something” syntax. It’s used for things like **if** and **for** tags as well as other things that “do” something. The `{%` is really easy because there are only a handful of things that can be used inside of it. If you go to Twig’s website, click Documentation, and scroll down, you can see a full list of everything in Twig. The “tags” header shows you everything that can be used inside of a “do something” tag, with more details about how each of these works. The only ones you need to worry about now are **if** and **for**. We’ll talk about a bunch more of these later.
 
 + Run a function (in this case, check if the variable 'logo' is set, if so print the logo)
 
-  ```
+  ```twig
   {% if logo %}
     {{ logo }}
   {% endif %}
@@ -32,7 +34,7 @@ The curly-percent (`{%`) is the other syntax, which I call the “do something�
 
 + Run a loop and print a value (in this case, for each product item in products array, print out the product item content)
 
-  ```
+  ```twig
   {% for product in products %}
     <h2>{{product}}</h2>
   {% endfor %}
@@ -43,7 +45,9 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the �
 
 + An example comment
 
-  `{# This is a comment for you to enjoy :) #}` 
+  ```twig
+  {# This is a comment for you to enjoy :) #}
+  ``` 
 
 
 ## What's in a twig template
@@ -57,13 +61,15 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the �
 ## Use Twig
 ### Print out the bundle type for the node:
 
-1. Inspect the `node.html.twig` template, review the comments and variables.
+1. Inspect the **node.html.twig** template, review the comments and variables.
 
-2. When editing the Acme theme's `node.html.twig`, locate the line with the ``{{ content }}``
+2. When editing the Acme theme's **node.html.twig**, locate the line with the ``{{ content }}``
 
 3. Add a line to output the the node's bundle type (from step 1) before the ``{{ content }}``: 
 
-	``<strong>{{ node.bundle|upper }}</strong>``
+	```twig
+	<strong>{{ node.bundle|upper }}</strong>
+	```
 
 4. Clear cache, visit (or refresh) a node.
 

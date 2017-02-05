@@ -188,52 +188,64 @@ If we are using a base theme, it is very possible that some css or js is coming 
 3. Take a look at the css that is being loaded on your site as a logged in user. Note that `/core/assets/vendor/jquery.ui/themes/base/dialog.css` and 
   `/core/themes/classy/css/components/breadcrumb.css` are being loaded.
 
-1. Navigate to your theme root and open the _acme.info.yml file
+1. Navigate to your theme root and open the **acme.info.yml** file
 
-2. Place the following code in your file
+2. In order to remove the files, we first need know which libaries they came from.
+
+
+4. Place the following code in your file
 
 	```
 	stylesheets-remove:
 	  - core/assets/vendor/jquery.ui/themes/base/dialog.css
 	  - '@classy/css/components/breadcrumb.css'
 	```
-	In this example we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7.
+	In this example we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that stylesheets-remove is technically deprecated and will be removed in Drupal 9.
 
 
 ### Overriding css or javascript
 
-Sometime we don't want to remove a file or a library, but we do have a better file for it to use. We can override whole libraries or components of them. Below is an example of libraries-override from drupal.org. You would place this in your *.info.yml file.
+Sometimes we don't want to remove a file or a library, but we do have a better file for it to use. We can override whole libraries or components of them. Below is an example of libraries-override from drupal.org. You would place this in your *.info.yml file. 
 
-**This code is just for show**
+Note: The methods for modifying libraries have changed during the development of Drupal 8. Check [Drupal.org's Theming Guide](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend) for the latest documentation.
 
-	libraries-override:
-  		# Replace an entire library
-  		core/drupal.collapse: mytheme/collapsed
-  		
-  		# Replace an asset with another.
-  		subtheme/library:
-    		css:
-      			theme:
-        			css/layout.css: css/my-layout.css
+**This code is just for show. YAML files cannot have comments.**
+
+```
+libraries-override:
+  # Replace an entire library.
+  core/drupal.collapse: mytheme/collapse
   
-  		# Remove an asset.
-  		drupal/dialog:
-    		css:
-      			theme:
-        			dialog.theme.css: false
-  		
-  		# Remove an entire library.
-  		core/modernizr: false
-  			
+  # Replace an asset with another.
+  subtheme/library:
+    css:
+      theme:
+        css/layout.css: css/my-layout.css
+
+  # Replace a core module JavaScript asset.
+  toolbar/toolbar:
+    js:
+      js/views/BodyVisualView.js: js/views/BodyVisualView.js
+
+  # Remove an asset.
+  drupal/dialog:
+    css:
+      theme:
+        dialog.theme.css: false
+  
+  # Remove an entire library.
+  core/modernizr: false  			
+```
 
 **Libraries Extend Example**
   		
-  	# Extend drupal.user: add assets from classy's user libraries.
-	libraries-extend:
-  			core/drupal.user: 
-    			- classy/user1
-    			- classy/user2
-
+```
+# Extend drupal.user: add assets from classy's user libraries.
+libraries-extend:
+  core/drupal.user: 
+    - classy/user1
+    - classy/user2
+```
 
 ## Questions you may have...
 + Why is the word `theme` in the library definitiion?
