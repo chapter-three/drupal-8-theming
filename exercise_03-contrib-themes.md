@@ -10,7 +10,7 @@ This is where most themers will start their career. Let someone else do the work
 
 1. **Download and extract the theme files or use Drush/Drupal console to download.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the the theme is compatible with Drupal 8.
 
-2. **Read directions and Enable the theme.** Make sure to Read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" on the main Administration menu of your site. 
+2. **Read directions and Enable the theme.** Make sure to Read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" link in the main Administration menu of your site. 
 
 3. **Make it active and/or your default theme.** Click 'Install' to enable the theme. Click 'Set as default' or Install and set as default' to make this the chosen theme for your site.
 

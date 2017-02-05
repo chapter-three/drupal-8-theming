@@ -6,10 +6,12 @@
 
 It’s hard to theme the content of a site when there is no content. So, before we really dive into the good stuff, lets first creating some content.
 
+(If you're comfortable creating content in Drupal, just devel generate some nodes.)
+
 
 1. In the admin menu, click "Content", then "Add content", and then click "Basic page". 
     1. Title: `About`
-    2. Body: `This is my awesome site that im making at BADCAMP in Berkeley, CA.` (Or filler text from wherever you want.)
+    2. Body: `This is my awesome site that im making with Chapter Three.` (Or filler text from wherever you want.)
     3. Check the box to **Provide a menu link** and leave all defaults.
     4. Click the **Save and publish** button.
 2. Click "Content", then "Add content", and then click "Article". 
@@ -27,7 +29,7 @@ The above process is fine for one or two items, but what if you need to test out
 
 1. Enable the **Devel generate** module if you have not already.
 1. Click "Configuration" in the Admin menu
-2. In the "Development" Group select "Generate content" 
+2. In the "Development" group select "Generate content" 
 	1. Select "Content Type: `Article`
 	2. How many nodes would you like to generate?: `100`
 	3. How far back in time should the nodes be dated?: `1 year`
@@ -44,7 +46,7 @@ The above process is fine for one or two items, but what if you need to test out
 	2. Maximum number of characters in vocabulary names: `20`
 	3. Click the **Generate** button.
 3. Click "Configuration" in the Admin menu
-4. In the "Development" Group select "Generate terms"
+4. In the "Development" group select "Generate terms"
 	1. Vocabularies: **Select any one vocabulary**
 	2. Number of terms?: `10`
 	2. Maximum number of characters in vocabulary names: `15`
@@ -53,7 +55,7 @@ The above process is fine for one or two items, but what if you need to test out
 
 ### For users
 1. Click "Configuration" in the Admin menu
-2. In the "Development" Group select "Generate users"
+2. In the "Development" group select "Generate users"
 	1. How many users would you like to generate?: `10`
 	2. Which roles should the users receive?: **Select a role or leave unchecked depending on what role/setup you would like to test**.
 	3. Password to be set?: **Set password or leave blank**
@@ -63,7 +65,7 @@ The above process is fine for one or two items, but what if you need to test out
 
 ### For menus
 1. Click "Configuration" in the Admin menu
-2. In the "Development" Group select "Generate menus"
+2. In the "Development" group select "Generate menus"
 	1. Generate links for these menus?: `Create new menu` & `Main navigation`
 	2. Number of new menus to create?: `1`
 	3. Number of links to generate?: `5`
