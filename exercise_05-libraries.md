@@ -48,7 +48,7 @@ In the following steps we will create a libraries.yml file, declare our library 
 
 6. Open them both and **add any high level css you want**. For `css-stuff.css` you could add:
 
-	```
+	```css
 	body {
 	  background-color: gray;
 	} 
@@ -60,7 +60,7 @@ In the following steps we will create a libraries.yml file, declare our library 
 	```
 	and for `css-stuff-print.css`, you could add: 
 	
-	```
+	```css
 	body {
 	 font-family: sans-serif;
 	 color: #888;
@@ -101,13 +101,13 @@ In Drupal 8, it is recommended that libraries only be applied when needed. Unles
     
     **widget.js:**
     
-    ```
+    ```js
     console.log('It Works')
     ```
     
     **widget.css:**
     
-    ```
+    ```css
     article { 
       background: white; 
     }
@@ -134,7 +134,7 @@ In Drupal 8, it is recommended that libraries only be applied when needed. Unles
     
 4. Add the following to **node.html.twig** near the top
     
-    ```
+    ```twig
     {% if node.bundle == 'article' %}
       {{ attach_library('acme/widget') }}
     {% endif %}

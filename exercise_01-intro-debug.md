@@ -19,7 +19,7 @@ By the end of this workshop, participants should be able to understand and use c
 
 	**MYDRUPAL** should be the path to your drupal sites root directory. Make sure to adjust your terminal commands accordingly.
 	
-	```
+	```bash
 	$ cd MYDRUPAL
 	$ chmod -Rf 775 sites/default/
 	```
@@ -27,34 +27,34 @@ By the end of this workshop, participants should be able to understand and use c
 ### Allow local settings and services.
 3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-754 in Drupal 8.2.6):
 
-	```
+	```php
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 	```
 4. Copy the file **MYDRUPAL/sites/example.settings.local.php** to **MYDRUPAL/sites/default/settings.local.php** using the following terminal command, or through your display:
 
-	```
+	```bash
 	$ cd MYDRUPAL
 	$ cp sites/example.settings.local.php sites/default/settings.local.php
 	```
 
 5. Create the **local.services.yml** file from **default.services.yml**. Copy the default file and rename it using the following terminal command, or through your display.
 	
-	```
+	```bash
 	$ cd MYDRUPAL
 	$ cp sites/default/default.services.yml sites/default/local.services.yml
 	```
 
 6. Locate the following line in **settings.local.php**:
 	
-	```
+	```php
 	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 	```
 	
 	change it to:
 	
-	```
+	```php
 	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/local.services.yml';
 	```
 
@@ -73,10 +73,10 @@ By the end of this workshop, participants should be able to understand and use c
  
 2. Uncomment the following lines in **settings.local.php**
 	
-	```
+	```php
 	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 	```
-	```
+	```php
 	$settings['cache']['bins']['render'] = 'cache.backend.null';
 	```
 	Note: Disabling the render cache is fine in the early stages of development but you'll wont to turn it on during testing.
