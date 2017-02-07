@@ -4,12 +4,12 @@
 
 ## The .info.yml file
 
-To create a new theme for Drupal 8, The only real requirement is to make sure you have implemented the .info.yml file (YaML, like Camel). Drupal 8 runs off of YaML files much the way that Drupal 7 ran off of .info files.
+To create a new theme for Drupal 8, the only real requirement is to make sure you have implemented the .info.yml file (YaML, like Camel). Drupal 8 runs off of YaML files much the way that Drupal 7 ran off of .info files.
 
 As long as you have your .info.yml file in place with a few keys in place, you have a theme (although if thats all you have in place, it's not going to be a pretty theme).
 
 ### Create the theme folder and "YaML" file
-1. Locate the _/themes_ folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level _/module_ and _/themes_ folders.
+1. Locate the _/themes_ folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level _/modules_ and _/themes_ folders.
 
 
 2. Create a new folder and call it `acme`
@@ -50,7 +50,7 @@ $ touch themes/acme/acme.info.yml
 5. Go to /admin/appearance and under the Acme theme choose "Install and set as default".
 
 ## Things we might find in a .info.yml file
-The following keys are items that we will often find in a *.info.yml file. Some are optional, Some are requiered. These keys provide meta-data about your theme, and define some of the basic functionality.
+The following keys are items that we will often find in a *.info.yml file. Some are optional, some are requiered. These keys provide meta-data about your theme, and define some of the basic functionality.
 
 1. `name` **Required** 
 The human readable name will appear on the Appearance page, where you can activate your theme.
@@ -83,7 +83,7 @@ Theme libraries contain css and/or javascript. Theme libraries are declared in a
 
 3. The `libraries-override` and `libraries-extend` keys can be used to take control over the components of a library, remove items or the complete library, or add additional elements to a library.
 
-4. The `stylesheets-remove` key is used to stop the addition of css components for core and contrib modules However, It is better to do this with `libraries-override`.
+4. The `stylesheets-remove` key is used to stop the addition of css components for core and contrib modules. However, it is better to do this with `libraries-override`.
 
 	```
 	stylesheets-remove:
