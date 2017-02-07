@@ -16,7 +16,7 @@ Form API and Drupal form alters are still in Drupal 8 are are still incredibly p
 
 2. Locate and open your **acme.theme** file, and add the following code.
 
-	```
+	```php
 	function acme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 		if ($form_id == 'search_block_form') {
    			// Add placeholder text
@@ -32,40 +32,40 @@ This function is refined to only effect the form with the matching **FORM_ID** i
 
 1. Replace the above function with the following code:
 	
-	```
+	```php
 	function acme_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 		// Add placeholder text
-    	$form['keys']['#attributes']['placeholder'] = t('Search');
+    	$form['keys']['#attributes']['placeholder'] = t('Search this site.');
 	}
 	```
 
 ### Adding a javascript via a library to a form 
 Let's say we want to leverage one of the libraries from core or contrib when our form is visible. 
 
-1. Search and remove any other instances of kint() in your theme. 
+1. Search and remove any other instances of kint() in your theme. Make sure the search_kint module is enabled.
 
 1. View your site as an annonymous user by opening a new browser or private window. Verify that `form.js` is not included.
 
 2. Add the following to the `acme_form_search_block_form_alter` function in **acme.theme**
 
-    ```  
+    ```php 
     kint(\Drupal::service('library.discovery')->getLibrariesByExtension('core'));
     ```
 
-3. Search for `form.js` in the the search form provided by kint. You'll see it highlighted under parent `jquery.form`. (The search_kint module must be enabled for this to work)
+3. Search for `form.js` in the the search form provided by kint. You'll see it highlighted under parent `drupal.form`. 
 
-7. Navigate back to your theme root directory and open your _acme.theme_ file.
+7. Navigate back to your theme root directory and open your **acme.theme** file.
 
 9. Add the following code to your `acme_form_search_block_form_alter` function:
 
-	```
+	```php
 	// Attach a library from our theme to a form.
    	$form['#attached']['library'][] = 'core/drupal.form';
 	```
 
 10. Clear your caches.
 
-If everything worked, the form.js file will now be loaded for anonymous users.
+If everything worked, the form.js file will now be loaded for whenever the search block is present even for anonymous users.
 	
 
 

@@ -14,7 +14,7 @@ In this exercise, we are going to use **hook\_preprocess\_html** to gain control
 
 2. Add the following code:
 
-	```
+	```php
     function acme_preprocess_html(&$variables) {
     // Our code will go here
     }
@@ -22,10 +22,10 @@ In this exercise, we are going to use **hook\_preprocess\_html** to gain control
 
 3. We want to add our own classes to the body tag. This first one will be for all pages, the second one will set a class for each region that has content. Once completed, save and clear caches. Then view the source code of a page and confirm that our new class is applied to the body tag.
 
-	```
+	```php
     // Add 'my-class' to all pages.
     function acme_preprocess_html(&$variables) {
-    $variables['attributes']['class'][] = 'my-class';
+      $variables['attributes']['class'][] = 'my-excellent-class';
     }
 	```
 
@@ -35,9 +35,8 @@ In this exercise, we are going to use **hook\_preprocess\_html** to gain control
 
 5. Then add the following code inside of your preprocess_html function, below the 'my-class' line
 	
-	```
+	```php
 	...	
-	
 	// This is the D7 equivalent of "global $theme"
 	$theme = \Drupal::theme()->getActiveTheme()->getName();
 	
@@ -49,7 +48,6 @@ In this exercise, we are going to use **hook\_preprocess\_html** to gain control
 	    $variables['attributes']['class'][] = $region_class . '-active';
 	  }
 	}
-	
 	...
 	```
 	

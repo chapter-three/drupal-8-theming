@@ -5,34 +5,35 @@
 ## Creating a theme settings file
 
 Often we need to create small, simple little settings for our theme that can make it more reusable and customizable across sites. We can create new theme settings on our theme's settings page that we can use to help configure and customize our theme.
-For this we will utilize two additional files. a _MYTHEME.settings.yml_ and a _theme-settings.php_ file
+For this we will utilize two additional files. **acme.settings.yml** and **theme-settings.php** file.
 
-1. Navigate to your theme root
+1. Go to MYDRUPAL.LOCAL/admin/appearance/settings/acme in your browser to see what settings are available by default.
 
-2. Create a new file called _acme.settings.yml_ and open in your preferred code editor.
+2. Create a new file called **acme.settings.yml** in your theme root and open in your preferred code editor.
+
+    ```bash 
+    $ cd MYDRUPAL
+    $ touch themes/acme/acme.settings.yml
+    ```
 
 3. Add the following code:
 
 	```
 	features:
-  		comment_user_picture: true
-   		comment_user_verification: true
-   		favicon: true
-   		logo: true
-   		name: true
-   		node_user_picture: true
-   		slogan: true
-	copyright_holder: ''
-	search_placeholder: 'Search site'
+  	  copyright_holder: ''
+	  search_placeholder: 'Search site'
 	```
 
-4. Navigate back to your theme root
+5. Create a new file in your theme directory called **theme-settings.php** 
 
-5. Create a new file in your theme directory called _theme-settings.php_ file and open in your preferred code editor.
-
+    ```bash 
+    $ cd MYDRUPAL
+    $ touch themes/acme/theme-settings.php
+    ```
+    
 6. Add the following code to that file.
 	
-	```
+	```php
 	<?php
 	
 	function acme_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {

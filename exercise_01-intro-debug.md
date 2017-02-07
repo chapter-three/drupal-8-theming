@@ -89,8 +89,8 @@ By the end of this workshop, participants should be able to understand and use c
       class: Drupal\Core\Cache\NullBackendFactory
     ```
 
-## Enable devel and kint debugging.
-1. Download the devel module and install devel. For information on installing a drupal 8 module, please see **[Drupal 8 Module Installation](https://www.drupal.org/documentation/install/modules-themes/modules-8)** (https://www.drupal.org/documentation/install/modules-themes/modules-8). Enable the Kint module. 
+## Enable devel kint and search_kint for debugging.
+1. Download and install the [Devel module](https://www.drupal.org/project/devel). For information on installing a drupal 8 module, please see **[Drupal 8 Module Installation](https://www.drupal.org/documentation/install/modules-themes/modules-8)** (https://www.drupal.org/documentation/install/modules-themes/modules-8). Enable the Kint module. Download and install the [Search Kint](https://www.drupal.org/project/search_kint) module
 
 2. No additional settings are needed after installation. 
 
@@ -118,7 +118,7 @@ Through out these exercises you'll be asked to clear cache or registry in order 
 
 * use ``$ drush cr`` 
 * go to Configuration > Performance and Clear All Caches. 
-* with admin_toolbar_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
+* with admin\_toolbar\_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
 * go to /rebuild.php
 
 ## Questions

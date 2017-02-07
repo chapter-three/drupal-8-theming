@@ -12,27 +12,33 @@ What is a preprocess function? A preprocess function is a function that allows u
 
 1. Create a file at the root of the Acme Theme named **acme.theme** and open in your preferred code editor
 
+    ```bash
+    $ cd MYDRUPAL
+    $ touch themes/acme/acme.theme
+    ```
+
 2. Write the following code in your new **acme.theme** file:
 	
-	```
+	```php
 	<?php
 	function acme_preprocess_page(&$variables) {
 		$variables['copyright'] = "It works!";
 	}
+	
 	```
 **Note that there is not a closing ?> at the end, but there should be a line of whitespace.**
 
-3. Clear Cache.
-
 4. Open up **page.html.twig** and near the closing footer element, print out our new variable using the following code:
 
-	```
-	{% if copyright %}
-	<div class="copyright">
-  	{{ copyright }}
-	</div>
-	{% endif %}
-	```
+    ```twig
+    {% if copyright %}
+      <div class="copyright">
+      {{ copyright }}
+      </div>
+    {% endif %}
+    ```
+3. Clear cache and verify your copyright is on the page.
+
 
 ### What year is it?
 
@@ -40,21 +46,22 @@ Great, it’s printing our variable, but we’re still not much better off than 
 
 1. Open **acme.theme** and add some php around our new variable so that it can print the current year instead of our filler message:
 	
-	```
+	```php
 	<?php
 	function acme_preprocess_page(&$variables) {
-		$variables['copyright'] = t("Copyright @date",
-			array('@date' => date('Y'))
-		);
+	  $variables['copyright'] = t("Copyright @date",
+	    array('@date' => date('Y'))
+	  );
 	}
 	```
 **Note that there is not a closing ?> at the end, but there should be a line of whitespace.**
 
 ##Questions you may have...
-* Where did you find that function name? I never would have guessed that.
-* What would happen if I didn’t check if a variable is set before printing it?
-* Why don’t I close the php tags?
-* Why does the new variable have a t() function around it?
-* What’s the best way to add markup and styles to our variable?
++ Where did you find that function name? I never would have guessed that.
++ What would happen if I didn’t check if a variable is set before printing it?
++ Why don’t I close the php tags?
++ Why does the new variable have a t() function around it?
++ What’s the best way to add markup and styles to our variable?
++ Could I have done all this in the twig template?
  
 ##Done ☺

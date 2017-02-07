@@ -10,17 +10,16 @@ These functions are `hook_theme_suggestions_alter()` function and the more targe
 
 1. Open the **acme.theme** file and add the following function:
 
-	```
+	```php
 	function acme_theme_suggestions_node_alter(&$suggestions, $variables, $hook) {
 		// Our code will go here.
-	}	
+	}
 	```
 
 2. Inside of our new function, add the following code:
 
-	```
+	```php
 	...
-	
 	if (\Drupal::currentUser()->isAuthenticated()) {
 		$bundle = $variables['elements']['#node']->bundle();
 		$mode = $variables['elements']['#view_mode'];
@@ -29,7 +28,6 @@ These functions are `hook_theme_suggestions_alter()` function and the more targe
 		$suggestions[] = 'node__' . $bundle . '__logged_in';
   		$suggestions[] = 'node__' . $view_mode . '__logged_in';
 	}
-	
 	...
 	```
 	This will create a new suggestion for Content types and Node view modes for when the viewer is logged in.

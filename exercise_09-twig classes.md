@@ -18,56 +18,61 @@ Drupal has a number of handy functions specifically designed for the manipuation
 ### Add multiple classes to the body tag.
 1. Remove all kint() statements from **node.html.twig**.
 
-2. Copy the core html.html.twig into your theme.
+2. Copy the classy html.html.twig into your theme.
 
-    ```
+    ```bash
     $ cd MYDRUPAL
     $ mkdir themes/acme/templates/html
-    $ cp core/modules/system/templates/html.html.twig themes/acme/templates/html/html.html.twig
+    $ cp core/themes/classy/templates/layout/html.html.twig themes/acme/templates/html/html.html.twig
     ```
 3. Clear Cache
 
 3. Above the DOCTYPE declaration and below the comments, add the following code.
 
-    ```
+    ```twig
     {% set myclasses = ['red', 'green', 'blue'] %}
     ```
 
-5. Find the line `<body{{ atrributes }}>` and change it to
+5. Find the line `<body{{ attributes.addClass(body_classes) }}>` and change it to
 
-    ```
-    <body{{ attributes.addClass(classes).addClass(myclasses) }}>
+    ```twig
+    <body{{ attributes.addClass(body_classes).addClass(myclasses) }}>
     ```
 
     You should now see classes `red`, `green` and `blue` attached to the body tag.
 
 ### Create a new custom variable.
-1. Look in the comments of your theme's **html.html.twig**. Note that `node_type` is one of the variable available to this template.
+Let's create a special body class for the user role.
 
-2. Below ```{% set myclasses = ['red', 'green', 'blue'] %}``` add ```{% set node_type_class = 'page-' ~ node_type %}```
+3. Use `{{ kint(user) }}` to inspect the user variable in **html.html.twig**.  Observe the path to get the roles array.
 
-    The `~` is used to concatenate strings.
+4. Use `{{ kint(logged_in) }}` to see the value of this variable when logged in and logged out. 
 
-3. Looking at the `<body>` tag on a node page produces a class like `page-article` but on the front page we see `page-`, let's fix this.
+2. Below ```{% set myclasses = ['red', 'green', 'blue'] %}``` add 
 
-    Wrap ```{% set node_type_class = 'page-' ~ node_type %}``` in an **if** statement. The result is:
+```twig
+{% if logged_in %} 
+    {% set roles = user.account.roles %}
+{% endif %}
+```
 
-    ```
-    {% if nodetype %}
-      {% set node_type_class = 'page-' ~ node_type %}
-    {% endif %}
-    ```
+3. Change the body tag to   
 
-    Now the appropriate class only appears on node pages.
+```twig
+<body{{ attributes.addClass(body_classes).addClass(myclasses).addClass(roles) }}>
+```
+
+3. Compare the `<body>` tag for logged in and logged out users. What are the results when you remove the `if` statement?
 
 -------------------
-
 
 
 ## Questions you may have...
 + How do I remove a class?
 + Where can I find other cool twig functions?
 + What happened to preprocess functions and the template.php file?
++ Why do we copy our template files from the classy theme?
++ How did you know the `user` variable was available?
 
 
 

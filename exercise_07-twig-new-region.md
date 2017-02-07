@@ -6,7 +6,7 @@
 
 The client wants a new region for special messages at the top of the footer, so we’ll give them a new region called _Footer top_. Eventually, it would be great to style this region to look a little nicer, but for now lets just put the content in place.
 
-1. Update _acme.info.yml_ to include the new Footer top region:
+1. Update **acme.info.yml** to include the new Footer top region:
 
 	```
 	regions:
@@ -19,7 +19,7 @@ The client wants a new region for special messages at the top of the footer, so 
 3. Navigate to the Classy theme in **MYDRUPAL/core/themes/classy/templates/layout** and locate **page.html.twig**.
 4. Make a copy of **page.html.twig** and put it in the **acme** theme folder. If you’d like to keep it organized ( **MYDRUPAL/sites/all/theme/acme/templates/page** ), you may, but this is not required.
 
-    ```
+    ```bash
     $ cd MYDRUPAL
     $ mkdir themes/acme/templates/page
     $ cp core/themes/classy/templates/layout/page.html.twig themes/acme/templates/page/page.html.twig
@@ -29,7 +29,7 @@ The client wants a new region for special messages at the top of the footer, so 
 5. Edit your theme’s new version of **page.html.twig**:
 Look for and copy the following lines of code around line 87:
 
-	```
+	```twig
 	...
 	
 	{% if page.footer %}
@@ -45,7 +45,7 @@ Look for and copy the following lines of code around line 87:
 7. In your pasted code, Replace `footer` with `footer_top`, It should look like this when you’re finished:
 
 
-	```
+	```twig
 	...
 	
 	{% if page.footer_top %}
