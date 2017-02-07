@@ -25,7 +25,7 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 
 ### Allow local settings and services.
-3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-754 in Drupal 8.2.6):
+3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-755 in Drupal 8.2.6):
 
 	```php
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
@@ -46,7 +46,7 @@ By the end of this workshop, participants should be able to understand and use c
 	$ cp sites/default/default.services.yml sites/default/local.services.yml
 	```
 
-6. Locate the following line in **settings.local.php**:
+6. Locate the following line in **settings.local.php**: (line 39)
 	
 	```php
 	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
@@ -71,7 +71,7 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 	Remember spaces are significant in .yml files
  
-2. Uncomment the following lines in **settings.local.php**
+2. Uncomment the following lines in **settings.local.php** (line 67) and (line 76)
 	
 	```php
 	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
