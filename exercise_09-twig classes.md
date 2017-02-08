@@ -36,7 +36,7 @@ Drupal has a number of handy functions specifically designed for the manipuation
 5. Find the line `<body{{ atrributes }}>` and change it to
 
     ```
-    <body{{ attributes.addClass(classes).addClass(myclasses) }}>
+    <body{{ attributes.addClass(myclasses) }}>
     ```
 
     You should now see classes `red`, `green` and `blue` attached to the body tag.
@@ -48,7 +48,12 @@ Drupal has a number of handy functions specifically designed for the manipuation
 
     The `~` is used to concatenate strings.
 
-3. Looking at the `<body>` tag on a node page produces a class like `page-article` but on the front page we see `page-`, let's fix this.
+3. Find the line ```<body{{ attributes.addClass(myclasses) }}>``` and change it to
+    ```
+    <body{{ attributes.addClass(myclasses).addClass(node_type_class) }}>
+    ```
+
+4. Looking at the `<body>` tag on a node page produces a class like `page-article` but on the front page we see `page-`, let's fix this.
 
     Wrap ```{% set node_type_class = 'page-' ~ node_type %}``` in an **if** statement. The result is:
 
