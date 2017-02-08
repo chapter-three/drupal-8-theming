@@ -12,25 +12,16 @@ Now that we have created some custom theme settings and we have the ability to c
 
 2. Back in our _acme.theme_ file, locate the **acme\_preprocess\_page()** function.
 
-3. Locate the section we added in Exercise 9. It looks like this:
+3. Locate the section where we added in Exercise 9. It looks like this:
 	
 	```
-	$variables['copyright_holder'] = '';
-	$name = \Drupal::config('system.site')->get('name');
-	
-	if (!empty($name)) {
-		$variables['copyright_holder'] = $name;
-	}
+   $variables['copyright'] = t("Copyright @date",
+      array('@date' => date('Y'))
+    );
 	```
-4. We are going to change this to use our variable if it has a value.
+4. We are going to change this to use our variable `copyright_holder` if it has a value.
 
-5. Add the following block of code below `$name = \Drupal::config('system.site')->get('name');` and above the `if` statement.
-	
-	```
-	$copyright_holder = theme_get_setting('copyright_holder');
-
-	```
-	It should look like this now:
+5. Add the following block of code below ```$variables['copyright'] = t("Copyright @date", array('@date' => date('Y')));```
 	
 	```
 	$variables['copyright_holder'] = '';
@@ -42,7 +33,16 @@ Now that we have created some custom theme settings and we have the ability to c
 		$variables['copyright_holder'] = $name;
 	}
 	```
-6. Clear caches and see if it worked. Change the value on the theme settings page if you haven't already (otherwise nothing will really change).
+6. In your `page.html.twig` add the following below `copyright` section
+```
+    {% if copyright_holder %}
+    <div class="copyright">
+      {{ copyright_holder }}
+    </div>
+  {% endif %}
+  ```
+  
+7. Clear caches and see if it worked. Change the value on the theme settings page if you haven't already (otherwise nothing will really change).
 
 We have declared our copyright_holder in our theme's settings, and it will override the site name as being the default copyright holder. A simple example, but powerful.
 
