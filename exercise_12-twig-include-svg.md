@@ -7,6 +7,10 @@ Often we want to include SVGs in our project because they load fast and can be e
 
 
 1. Create a folder called **images** in your theme root. 
+	``` 
+	mkdir themes/acme/images
+	```
+	
 2. Copy the svg code from an from your machine or use the example below. 
 
     ```
