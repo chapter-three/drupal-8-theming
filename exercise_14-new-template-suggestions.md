@@ -34,7 +34,7 @@ These functions are `hook_theme_suggestions_alter()` function and the more targe
 	```
 	This will create a new suggestion for Content types and Node view modes for when the viewer is logged in.
 
-3. Clear you caches and visit a node page. View the source code and see if you an find your new template suggestions at the start of your node output. 
+3. Clear your caches and visit a node page. View the source code and see if you can find your new template suggestions at the start of your node output. 
 
 
 ## Questions you may have...
