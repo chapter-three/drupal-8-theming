@@ -4,7 +4,7 @@
 
 ## Breakpoints and setting up responsive images
 
-Using the Core Breakpoint module , you can now define your theme’s breakpoints in code. There is no UI for doing this, but we have a solid API from the Breakpoint modules that allows modules and themes to define breakpoints and breakpoint groups, as well as resolution modifiers that come in handy when targeting devices with HD/Retina displays. To keep this exercise a little simpler, we wont wont worry about modifiers for HD displays.
+Using the Core Breakpoint module, you can now define your theme’s breakpoints in code. There is no UI for doing this, but we have a solid API from the Breakpoint modules that allows modules and themes to define breakpoints and breakpoint groups, as well as resolution modifiers that come in handy when targeting devices with HD/Retina displays. To keep this exercise a little simpler, we wont won't worry about modifiers for HD displays.
 
 **Make sure Breakpoint (breakpoint) and Responsive Image (responsive_image) modules are enabled**
 
@@ -16,7 +16,9 @@ Using the Core Breakpoint module , you can now define your theme’s breakpoints
 
 1. Navigate to your theme root directory
 
-2. Create a new file called **acme.breakpoints.yml** and open it in your preferred code editor 
+2. Create a new file at the root of the Acme Theme called **acme.breakpoints.yml** and open it in your preferred code editor.
+
+3. Write the following code in your new ***acme.breakpoints.yml*** file
 
 	```
 	acme.mobile:
