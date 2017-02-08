@@ -40,7 +40,7 @@ We are going to copy the default block twig template into our theme, rename it a
     ```
     $ cd MYDRUPAL
     $ cp core/themes/classy/templates/block/block.html.twig themes/acme/templates
-
+	```
 
 4. Open that file in your preferred code editor. You should see the following code:
 	
