@@ -4,11 +4,11 @@
 
 ## Apply our theme settings to our custom variables
 
-Now that we have created some custom theme settings and we have the ability to customize them through the UI, lets put them to use. We will capitalize on the functionality we created in an earlier excercise. We will alter our **preprocess_page()** "copyright_holder" variable to be customizable with one of our new theme settings.
+Now that we have created some custom theme settings and we have the ability to customize them through the UI, lets put them to use. We will capitalize on the functionality we created in an earlier excercise. We will alter our **preprocess_page()** to include the "copyright_holder" variable that will be customizable with one of our new theme settings.
 
 ### Customize the copyright holder
 
-2. In our **acme.theme** file, locate the `acme\_preprocess\_page()` function.
+2. In our **acme.theme** file, locate the `acme_preprocess_page()` function.
 
 5. Modify the code to include the copyright_holder setting.
 	
