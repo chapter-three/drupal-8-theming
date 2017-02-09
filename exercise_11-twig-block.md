@@ -37,14 +37,18 @@ We are going to copy the default block twig template into our theme, rename it a
 
 2. **Save** the configuration, and visit a page on the front end of your site. **Make sure you can see the block somewhere on your site**.
 
-3. Locate and copy the **block.html.twig** template located at **MYDRUPAL/core/themes/classy/templates/block/block.html.twig** and copy it into your **/templates** folder of your custom theme.
+3. Locate and copy the **block.html.twig** template located at **MYDRUPAL/core/themes/classy/templates/block/block.html.twig** and copy it into your **/templates/block** folder of your custom theme.
 
     ```bash
     $ cd MYDRUPAL
     $ mkdir themes/acme/templates/block
     $ cp core/themes/classy/templates/block/block.html.twig themes/acme/templates/block/block.html.twig
+<<<<<<< HEAD
     ```
 
+=======
+	```
+>>>>>>> 6a7dfa7c1d3a9cbea1a5e955fc9d4d3bc8ab74fb
 
 4. Open that file in your preferred code editor. You should see the following code:
 	

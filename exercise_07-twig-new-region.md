@@ -27,7 +27,7 @@ The client wants a new region for special messages at the top of the footer, so 
 
 
 5. Edit your theme’s new version of **page.html.twig**:
-Look for and copy the following lines of code around line 87:
+Look for and copy the following lines of code around line 81:
 
 	```twig
 	...

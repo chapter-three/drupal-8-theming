@@ -4,26 +4,26 @@
 
 ## Populate some content
 
-It’s hard to theme the content of a site when there is no content. So, before we really dive into the good stuff, lets first creating some content.
+It’s hard to theme the content of a site when there is no content. So, before we really dive into the good stuff, lets start creating some content.
 
 (If you're comfortable creating content in Drupal, just devel generate some nodes.)
 
 
 1. In the admin menu, click "Content", then "Add content", and then click "Basic page". 
     1. Title: `About`
-    2. Body: `This is my awesome site that im making with Chapter Three.` (Or filler text from wherever you want.)
-    3. Check the box to **Provide a menu link** and leave all defaults.
+    2. Body: `This is my awesome site that I'm making with Chapter Three.` (Or filler text from wherever you want.)
+    3. Under **Menu Settings** check the box to **Provide a menu link** and leave all defaults.
     4. Click the **Save and publish** button.
 2. Click "Content", then "Add content", and then click "Article". 
     1. Title: `An Interesting Article`
-    2. Body: `We’re preparing to launch a new Drupal website full of interesting articles like this one.` -- (Or filler text from wherever you want.)
+    2. Body: `We’re preparing to launch a new Drupal website full of interesting articles like this one.`  (Or filler text from wherever you want.)
     3. Tags: `website, Drupal`
-    4. Upload an Image of your choice with Alternate text of your choice.
+    4. Upload an Image of your choice with Alternative text of your choice.
     5. Click the **Save and publish** button.
 
 ## Auto Generate Content
 
-The above process is fine for one or two items, but what if you need to test out what 50 nodes look like in a view? What if you need to know how the page is going to look with a couple dozen comments all at different levels? Are you going to create each one of those items by hand? hopefully not. Luckily, we have a handy module that has already been ported to D8 and is (mostly) able to take care of this work for us. Enter the "Devel" and "Devel Generate" module.
+The above process is fine for one or two items, but what if you need to test out what 50 nodes look like in a view? What if you need to know how the page is going to look with a couple dozen comments all at different levels? Are you going to create each one of those items by hand? Hopefully not. Luckily, we have a handy module that has already been ported to D8 and is (mostly) able to take care of this work for us. Enter the "Devel" and "Devel Generate" module.
 
 ### For content
 

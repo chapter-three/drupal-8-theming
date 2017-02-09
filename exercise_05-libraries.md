@@ -181,7 +181,7 @@ $ cp core/themes/classy/templates/content/node.html.twig themes/acme/templates/n
 ### Removing css or javascript
 
 
-If we are using a base theme, it is very possible that some css or js is coming over from the base theme that we just do not want to use in our theme. Or sometimes there is some css coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed", You may find yourself in a situation where a contrib module or other library is just adding to much. We can remove stylessheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml file
+If we are using a base theme, it is very possible that some css or js is coming over from the base theme that we just do not want to use in our theme. Or sometimes there is some css coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed", you may find yourself in a situation where a contrib module or other library is just adding to much. We can remove stylessheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml file
 
 **This method is for removing individual css or javascript files**
 

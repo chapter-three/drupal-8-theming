@@ -33,11 +33,11 @@ If you run into problems, check the themes issue queue and search the forums. If
 
 + **MYTHEME.breakpoints.yml** - Breakpoints define where a design changes in order to respond to different devices. While the theme can use this file, its info can also be used by Drupal core to make adjustments to data it sends to the theme.
 
-+ **MYTHEME.theme** - The .theme file the equivalent to the old Drupal 7 template.php file. It is a PHP file that contains conditional logic and data (pre)processing of the output.
++ **MYTHEME.theme** - The .theme file is equivalent to the old Drupal 7 template.php file. It is a PHP file that contains conditional logic and data (pre)processing of the output.
 
 + **screenshot.png** - If a screenshot.png file is found in the theme folder, it will be used on the Appearance page. You can also define a screenshot image in .info.yml file.
 
-+ **logo.svg** - New to Drupal 8, Logos are best saved as svg files and placed in the main level of your theme. Logos can also be uploaded at Appearance > Settings.
++ **logo.svg** - New to Drupal 8, logos are best saved as svg files and placed in the main level of your theme. Logos can also be uploaded at Appearance > Settings.
 
 + **css/** or **styles/** - Drupal 8 core themes organize CSS files following the SMACCS style guide. For CSS files to be loaded, they must be defined in your .libraries.yml file. You can override or remove core and module css in your themes .info.yml file.
 
