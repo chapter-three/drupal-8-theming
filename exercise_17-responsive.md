@@ -4,7 +4,7 @@
 
 ## Breakpoints and setting up responsive images
 
-Using the Core Breakpoint module, you can now define your theme’s breakpoints in code. There is no UI for doing this, but we have a solid API from the Breakpoint module that allows modules and themes to define breakpoints and breakpoint groups, as well as resolution modifiers that come in handy when targeting devices with HD/Retina displays. To keep this exercise a little simpler, we wont wont worry about modifiers for HD displays. 
+Using the core Breakpoint module, you can now define your theme’s breakpoints in code. There is no UI for doing this, but we have a solid API from the Breakpoint module that allows modules and themes to define breakpoints and breakpoint groups, as well as resolution modifiers that come in handy when targeting devices with HD/Retina displays. To keep this exercise a little simpler, we won't worry about modifiers for HD displays. 
 
 Find **toolbar.breakpoints.yml** for and observe how the breakpoints correspond to the administration menu styles.
 
@@ -18,7 +18,7 @@ Find **toolbar.breakpoints.yml** for and observe how the breakpoints correspond 
 
 1. Navigate to your theme root directory
 
-2. Create a new file called **acme.breakpoints.yml** and 
+2. Create a new file called **acme.breakpoints.yml** 
     
     ```bash 
     $ cd MYDRUPAL

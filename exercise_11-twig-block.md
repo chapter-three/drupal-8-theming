@@ -43,12 +43,7 @@ We are going to copy the default block twig template into our theme, rename it a
     $ cd MYDRUPAL
     $ mkdir themes/acme/templates/block
     $ cp core/themes/classy/templates/block/block.html.twig themes/acme/templates/block/block.html.twig
-<<<<<<< HEAD
     ```
-
-=======
-	```
->>>>>>> 6a7dfa7c1d3a9cbea1a5e955fc9d4d3bc8ab74fb
 
 4. Open that file in your preferred code editor. You should see the following code:
 	

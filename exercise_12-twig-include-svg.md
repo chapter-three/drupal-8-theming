@@ -7,14 +7,11 @@ Often we want to include SVGs in our project because they load fast and can be e
 
 
 1. Create a folder called **images** in your theme root. 
-<<<<<<< HEAD
-=======
 	``` 
 	mkdir themes/acme/images
 	```
 	
 2. Copy the svg code from an from your machine or use the example below. 
->>>>>>> 6a7dfa7c1d3a9cbea1a5e955fc9d4d3bc8ab74fb
 
 ```bash
 $ cd MYDRUPAL

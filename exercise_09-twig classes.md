@@ -18,7 +18,7 @@ Drupal has a number of handy functions specifically designed for the manipuation
 ### Add multiple classes to the body tag.
 1. Remove all kint() statements from **node.html.twig**.
 
-2. Copy the classy html.html.twig into your theme.
+2. Copy classy's **html.html.twig** into your theme.
 
     ```bash
     $ cd MYDRUPAL
@@ -35,15 +35,10 @@ Drupal has a number of handy functions specifically designed for the manipuation
 
 5. Find the line `<body{{ attributes.addClass(body_classes) }}>` and change it to
 
-<<<<<<< HEAD
     ```twig
     <body{{ attributes.addClass(body_classes).addClass(myclasses) }}>
-=======
     ```
-    <body{{ attributes.addClass(myclasses) }}>
->>>>>>> 6a7dfa7c1d3a9cbea1a5e955fc9d4d3bc8ab74fb
-    ```
-
+   
     You should now see classes `red`, `green` and `blue` attached to the body tag.
 
 ### Create a new custom variable.
@@ -53,16 +48,7 @@ Let's create a special body class for the user role.
 
 4. Use `{{ kint(logged_in) }}` to see the value of this variable when logged in and logged out. 
 
-<<<<<<< HEAD
 2. Below ```{% set myclasses = ['red', 'green', 'blue'] %}``` add 
-=======
-3. Find the line ```<body{{ attributes.addClass(myclasses) }}>``` and change it to
-    ```
-    <body{{ attributes.addClass(myclasses).addClass(node_type_class) }}>
-    ```
-
-4. Looking at the `<body>` tag on a node page produces a class like `page-article` but on the front page we see `page-`, let's fix this.
->>>>>>> 6a7dfa7c1d3a9cbea1a5e955fc9d4d3bc8ab74fb
 
 ```twig
 {% if logged_in %} 
