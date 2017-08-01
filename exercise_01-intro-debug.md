@@ -28,9 +28,9 @@ By the end of this workshop, participants should be able to understand and use c
 3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-755 in Drupal 8.2.6):
 
 	```php
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+           # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+           #   include $app_root . '/' . $site_path . '/settings.local.php';
+           # }
 	```
 4. Copy the file **MYDRUPAL/sites/example.settings.local.php** to **MYDRUPAL/sites/default/settings.local.php** using the following terminal command, or through your display:
 
@@ -81,13 +81,14 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 	Note: Disabling the render cache is fine in the early stages of development but you'll want to turn it on during testing.
 	
-2. Add the following to the bottom of **local.services.yml**
+2. Add the following to the bottom of **local.services.yml** Indentation is important in .yml files. Each line should be indented 2 spaces more than the previous one.
 	
-	```
-	services:
-  	  cache.backend.null:
-    	class: Drupal\Core\Cache\NullBackendFactory
-    ```
+```
+services:
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory
+    
+```
 
 ## Enable devel kint and search_kint for debugging.
 1. Download and install the [Devel module](https://www.drupal.org/project/devel). For information on installing a drupal 8 module, please see **[Drupal 8 Module Installation](https://www.drupal.org/documentation/install/modules-themes/modules-8)** (https://www.drupal.org/documentation/install/modules-themes/modules-8). Enable the Kint module. Download and install the [Search Kint](https://www.drupal.org/project/search_kint) module
