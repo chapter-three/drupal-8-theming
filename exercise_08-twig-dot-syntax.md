@@ -8,9 +8,11 @@ Look at the comments at the top of the node.html.twig template. The comments det
 
 ### Use `kint()` to inspect the content variable.
 
-1. Add `{{ kint(content) }}` to the bottom of your **node.twig.html field.
+1. Add `{{ kint(content) }}` to the bottom of your **node.twig.html** field.
 
-2. Inspect the content variable. Note that body and field_image are available.
+2. Go to an Article node page.
+
+3. Inspect the content variable. Note that body and field_image are available.
 
     _Make sure your [php memory limit](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/changing-php-memory-limits) is high (> 256) or you may see a white screen of death._
 
