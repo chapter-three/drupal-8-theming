@@ -4,7 +4,7 @@
 
 ## Create new template suggestions
 
-In drupal 7, we used to create new template suggestions in our preprocess functions. In drupal 8, we use two new functions to create new suggestions for a twig templates.
+In Drupal 7, we used to create new template suggestions in our preprocess functions. In Drupal 8, we use two new functions to create new suggestions for a twig templates.
 
 These functions are `hook_theme_suggestions_alter()` function and the more targeted, `hook_theme_suggestions_HOOK_alter()` function. The `HOOK` refers to the theme hook being used, like 'node' or 'page' or 'menu_link'. This `HOOK` helps to focus in your suggestions to a specific theme component. In this exercise we will create new suggestions for our 'node' templates based off if the user is logged in or not.
 
@@ -30,13 +30,14 @@ These functions are `hook_theme_suggestions_alter()` function and the more targe
 	}
 	...
 	```
-	This will create a new suggestion for Content types and Node view modes for when the viewer is logged in.
+	This will create a new suggestion for content types and node view modes for when the viewer is logged in.
 
 3. Clear your caches and visit a node page. View the source code and see if you can find your new template suggestions at the start of your node output. 
 
 
 ## Questions you may have...
 + What is a theme suggestion HOOK?
++ What do I do with these new theme suggestions?
 
 
 ## Done ☺

@@ -4,13 +4,13 @@
 
 ## .theme file and preprocess_page
 
-Don't make yourself responsible for updating every site on January 1st. Let the computer do the work for you and automatically set items, like the copyright date, to the current year. We will begin to dive into some more advanced elements of Drupal theming, including preprocess functions and template variables. 
+Don't make yourself responsible for updating every site on January 1st. Let the computer do the work for you and automatically set items, like the copyright date, to the current year. We will begin to dive into some more advanced elements of Drupal theming including preprocess functions and template variables. 
 
 What is a preprocess function? A preprocess function is a function that allows us to manipulate (add, edit, or remove) our data before it is processed by our template. Hence, the "pre" in preprocess. It's powered by **hook\_preprocess()** function. **hook\_preprocess\_HOOK()** allows modules to preprocess theme variables, but for a specific theme hook, like node, page, or menu_link. For our example we will manipulate the data before it goes to the **page** twig template (`page.html.twig`), so we will use hook\_preprocess\_**page**()
 
 ### Create our .theme file
 
-1. Create a file at the root of the Acme Theme named **acme.theme** and open in your preferred code editor
+1. Create a file at the root of the Acme theme named **acme.theme** and open in your preferred code editor
 
     ```bash
     $ cd MYDRUPAL

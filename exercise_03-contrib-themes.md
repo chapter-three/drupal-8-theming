@@ -10,16 +10,18 @@ This is where most themers will start their career. Let someone else do the work
 
 1. **Download and extract the theme files or use Drush/Drupal console to download.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the the theme is compatible with Drupal 8.
 
-2. **Read directions and Enable the theme.** Make sure to Read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" link in the main Administration menu of your site. 
+2. **Read directions and enable the theme.** Make sure to read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" link in the main Administration menu of your site. 
 
 3. **Make it active and/or your default theme.** Click 'Install' to enable the theme. Click 'Set as default' or Install and set as default' to make this the chosen theme for your site.
 
-If you run into problems, check the themes issue queue and search the forums. If your problem hasn't already been addressed, post a question and someone will try to help you out.
+If you run into problems, check the theme's issue queue and search the forums. If your problem hasn't already been addressed, post a question and someone will try to help you out.
 
 ## Install our first contrib...
 1. Download and add the latest recommended release of _Radix_:  http://drupal.org/project/radix 
 2. Also download and add the latest recommended release of the _Mayo_ theme: https://www.drupal.org/project/mayo
-3. Read `README.txt` inside of the _mayo_ folder to know what to expect.
+3. Read `README.txt` inside of the _mayo_ folder to know what to expect. 
+	
+	*You can ignore the npm instructions for now.*
 4. Enable the _Mayo_ theme:
     1. Click on **Appearance** at the top.
     2. Find _Mayo_ near the bottom and click **Install and set default**.

@@ -80,7 +80,7 @@ We are going to copy the default block twig template into our theme, rename it a
 	
 	These are the template suggestions for different components of the page. These come from our theme and twig debug enabling. Twig is telling you exactly how you can name your new template files to make sure they effect that component. The `x` at the start of a name refers to the template that is currently being used to build that component. Starting from the bottom of the list, the names are in order of priority override.
 	
-6. So that it only effects the "Powered by Drupal" block, _RENAME_ the `block.html.twig` file to `block--system-powered-by-block.html.twig`
+6. So that it only effects the "Powered by Drupal" block, rename the `block.html.twig` file to `block--system-powered-by-block.html.twig`
 
 
 7. Open the `block--system-powered-by-block.html.twig` file and replace all the code in it with the following code:
@@ -101,5 +101,6 @@ We only override the content inside the twig block name **"content"**, The rest 
 ## Questions you may have...
 + What is the `|t` in our twig template?
 + What is the `{% trans %}` component in twig?
++ Can I use all the Twig functions from Sensio labs?
 
 ## Done ☺

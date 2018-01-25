@@ -2,13 +2,13 @@
 
 # Exercise 1: 
 
-## What is Theming in Drupal and Drupal 8
+## What is theming in Drupal and Drupal 8
 
 Theming in Drupal is taking the processed data from Drupal, and outputting it our desired html structure so that web browsers can display our content. Themes make Drupal websites beautiful, and can make the difference between a user friendly site or a difficult to use site. A good theme will show off all the best aspects of your website, while maintaining all the speed and flexibility that Drupal brings to the table.  
 
 By the end of this workshop, participants should be able to understand and use common theme components for Drupal 8 and understand the major changes between Drupal 7 and Drupal 8 theming.
 
-## I. Enable Theme debugging and other Local Settings.
+## I. Enable theme debugging and other local settings.
 
 ### Make files writable.
 1. Using your terminal, or through your display, locate your **settings.php** file. The file is usually found at **MYDRUPAL/sites/default/settings.php**. 
@@ -28,8 +28,13 @@ By the end of this workshop, participants should be able to understand and use c
 
 2. Download this repo's [local.services.yml](local.services.yml) and place it at MYDRUPAL/sites/default/local.services.yml
 
+3. After this step:
+	
+	* CSS and JS should not be cached.	
+	* Changes to twig, js and css files will be seen on page refresh.
+	* Theme debugging information will be available in source comments. 
 
-## II. User Composer to download [Devel](https://www.drupal.org/project/devel), [Search Kint](https://www.drupal.org/project/search_kint) and [Admin Toolbar](https://www.drupal.org/project/admin_toobar)modules.
+## II. User Composer to download [Devel](https://www.drupal.org/project/devel), [Search Kint](https://www.drupal.org/project/search_kint) and [Admin Toolbar](https://www.drupal.org/project/admin_toobar) modules.
  
  0. Open terminal and navigate to your site root.
  
@@ -88,7 +93,7 @@ Through out these exercises you'll be asked to clear cache or registry in order 
  
 **Ways to clear registry (aka "Clear Cache"):**
 
-* use ``$ drush cr`` 
+* use ``$ drush cr`` in the terminal
 * go to Configuration > Performance and Clear All Caches. 
 * with admin\_toolbar\_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
 
@@ -96,5 +101,6 @@ Through out these exercises you'll be asked to clear cache or registry in order 
 + What is drush and what is `drush cr`?
 + Why can't I use `drush dl`?
 + My terminal says `bash: $: command not found`. What happened?
++ Why don't we use settings.php ?
 
 ## Done ☺

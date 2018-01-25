@@ -36,7 +36,7 @@ $ touch themes/acme/acme.libraries.yml
 
 3. Add the following code to that file:
 	
-	```
+	```yml
     css-stuff:
       version: VERSION
       css:
@@ -190,7 +190,7 @@ If we are using a base theme, it is very possible that some css or js is coming 
 
 1. Navigate to your theme root and open the **acme.info.yml** file
 
-2. In order to remove the files, we first need know which libaries they came from.
+2. In order to remove the files, we first need know which libraries they came from.
 
 
 4. Place the following code in your file
@@ -248,7 +248,8 @@ libraries-extend:
 ```
 
 ## Questions you may have...
-+ Why is the word `theme` in the library definitiion?
++ Why is the word `theme` in the library definition?
++ Is `//fonts.googleapis.com/...` a comment?
 
 
 ## Done ☺

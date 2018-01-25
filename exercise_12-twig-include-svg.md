@@ -38,6 +38,7 @@ You can use an svg on your machine or the example below.
 	
 ## Questions you may have...
 + What other types of files can be included?
++ Where does the function `active_theme_path()` come from?
 
 
 ## Done ☺

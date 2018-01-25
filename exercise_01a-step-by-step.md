@@ -48,18 +48,24 @@
 2. Uncomment the following lines in **settings.local.php** (line 67) and (line 76)
 	
 	```php
-	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-	```
-	```php
 	$settings['cache']['bins']['render'] = 'cache.backend.null';
 	```
-	Note: Disabling the render cache is fine in the early stages of development but you'll want to turn it on during testing.
+	```php
+	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+	```
+	*Note: Disabling the render cache is fine in the early stages of development but you'll want to turn it on during testing.*
 	
 2. Add the following to the bottom of **local.services.yml** Indentation is important in .yml files. Each line should be indented 2 spaces more than the previous one.
 	
-```
-services:
-  cache.backend.null:
-    class: Drupal\Core\Cache\NullBackendFactory
-    
-```
+	```
+	services:
+	  cache.backend.null:
+	    class: Drupal\Core\Cache\NullBackendFactory
+	    
+	```
+	
+3. Did it work?
+	
+	* CSS and JS should not be cached.	
+	* Changes to twig, js and css files should be seen on page refresh.
+	* Debugging information will be available in source comments.

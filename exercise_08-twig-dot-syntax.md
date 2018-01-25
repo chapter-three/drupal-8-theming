@@ -17,7 +17,7 @@ Look at the comments at the top of the node.html.twig template. The comments det
     _Make sure your [php memory limit](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/changing-php-memory-limits) is high (> 256) or you may see a white screen of death._
 
 
-### Print Content without certain fields.
+### Print content without certain fields.
 
 1. Delete the kint statement.
 
@@ -50,8 +50,11 @@ The `.` syntax in twig is a shorthand for a number of PHP methods and functions.
 1. Spend a few moments trying to print out variables and their children.
 
 
-    ```
+    ```twig
     {{ sandwich.cheese }}
+    ```
+    
+    ```php
     // Array key.
     $sandwich['cheese'];
     // Object property.
@@ -70,5 +73,6 @@ The `.` syntax in twig is a shorthand for a number of PHP methods and functions.
 
 ## Questions you may have...
 + What if I only want the body text without the surrounding markup?
++ Why do you keep telling me to delete my kint statements?
 
 ## Done ☺

@@ -28,7 +28,7 @@ The curly-percent (`{%`) is the other syntax, which I call the â€œdo somethingâ€
 
   ```twig
   {% if logo %}
-    {{ logo }}
+      {{ logo }}
   {% endif %}
   ```
 
@@ -36,7 +36,7 @@ The curly-percent (`{%`) is the other syntax, which I call the â€œdo somethingâ€
 
   ```twig
   {% for product in products %}
-    <h2>{{product}}</h2>
+      <h2>{{product}}</h2>
   {% endfor %}
   ```
 
@@ -55,8 +55,6 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the â
 3. Open your theme's **node.html.twig** file in a text editor and add one of the following lines somewhere at the end of the twig template `{{ dump(date) }}` or `{{ kint(content_attributes) }}`
 
 4. Visit a node page and lets see what it gives us.
-
-**Using kint inside twig templates may cause errors in 8.1.2**
 
 ## Use Twig
 ### Print out the bundle type for the node:
