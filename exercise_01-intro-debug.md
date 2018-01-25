@@ -1,6 +1,6 @@
 #### Drupal 8 Theming
 
-# Exercise 1: 
+# Exercise 1: Local Setup
 
 ## What is theming in Drupal and Drupal 8
 
@@ -36,41 +36,42 @@ By the end of this workshop, participants should be able to understand and use c
 
 ## II. User Composer to download [Devel](https://www.drupal.org/project/devel), [Search Kint](https://www.drupal.org/project/search_kint) and [Admin Toolbar](https://www.drupal.org/project/admin_toobar) modules.
  
- 0. Open terminal and navigate to your site root.
+  _Composer is the only recommended way of installing modules for Drupal 8. While it is still possible to download modules as packages, users who do so will encounter conflicts and dependency issues. For information on installing a drupal 8 modules with composer, please see [Using Composer to manage Drupal site dependencies](https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#adding-modules)._
+
+ 
+  0. Open terminal and navigate to your site root.
  
     ```bash
     $ cd MYDRUPAL
     ```
  
- 1. Download devel and its dependencies.
+  1. Download devel and its dependencies.
  
     ```bash
     $ composer require drupal/devel 
     ```
     
- 2. Download Admin Toolbar and its dependencies.
+  2. Download Admin Toolbar and its dependencies.
 
     ```bash
     $ composer require drupal/admin_toolbar
     ```
  
- 2. Download Search Kint and its dependencies.
+  2. Download Search Kint and its dependencies.
   
       ```bash
       $ composer require drupal/search_kint 
       ```
 
- _Composer is the only recommended way of installing modules for Drupal 8. While it is still possible to download modules as packages, users who do so will encounter conflicts and dependency issues. For information on installing a drupal 8 modules with composer, please see [Using Composer to manage Drupal site dependencies](https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#adding-modules)._
-  
-1. Enable the modules using drush or through the UI and clear registry.
+  1. Enable the modules using drush or through the UI and clear registry.
     
     ```bash
     $ drush en devel kint search_kint admin_toolbar admin_toolbar_tools -y
     $ drush cr
     ```
-2. Go to your http://MYSITE/admin/module and verify the above modules are enabled. 
+  2. Go to your http://MYSITE/admin/module and verify the above modules are enabled. 
 
-_As we work on the exercises, you can use the following to see what data you have available to you inside of a function. You replace `$VARIABLE_NAME` with the actual variable that you want to view the contents of._
+*As we work on the exercises, you can use the following to see what data you have available to you inside of a function. You replace `$VARIABLE_NAME` with the actual variable that you want to view the contents of.*
 
 _In .theme file:_
 
@@ -89,7 +90,7 @@ _In .twig files:_
 
 ## III. Clearing the Registry
 
-Through out these exercises you'll be asked to clear cache or registry in order to see changes. 
+Throughout these exercises you'll be asked to clear cache or registry in order to see changes. 
  
 **Ways to clear registry (aka "Clear Cache"):**
 
