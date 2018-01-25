@@ -57,12 +57,13 @@ By the end of this workshop, participants should be able to understand and use c
 
  _Composer is the only recommended way of installing modules for Drupal 8. While it is still possible to download modules as packages, users who do so will encounter conflicts and dependency issues. For information on installing a drupal 8 modules with composer, please see [Using Composer to manage Drupal site dependencies](https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#adding-modules)._
   
-1. Enable the modules using drush or through the UI.
+1. Enable the modules using drush or through the UI and clear registry.
     
     ```bash
-    $ drush en devel kint admin_toolbar admin_toolbar_tools -y
+    $ drush en devel kint search_kint admin_toolbar admin_toolbar_tools -y
+    $ drush cr
     ```
-
+2. Go to your http://MYSITE/admin/module and verify the above modules are enabled. 
 
 _As we work on the exercises, you can use the following to see what data you have available to you inside of a function. You replace `$VARIABLE_NAME` with the actual variable that you want to view the contents of._
 
