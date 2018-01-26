@@ -4,7 +4,7 @@
 
 ## Manipulating variables in the template
 
-Look at the comments at the top of the node.html.twig template. The comments detail the variables that are available to this particular template. In twig we have the ability to use certain filters to manipulate the output of variables.
+Look at the comments at the top of the **node.html.twig** template. The comments detail the variables that are available to this particular template. In twig, we have the ability to use certain filters to manipulate the output of variables.
 
 ### Use `kint()` to inspect the content variable.
 
@@ -14,7 +14,7 @@ Look at the comments at the top of the node.html.twig template. The comments det
 
 3. Inspect the content variable. Note that body and field_image are available.
 
-    _Make sure your [php memory limit](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/changing-php-memory-limits) is high (> 256) or you may see a white screen of death._
+    _Make sure your [php memory limit](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/changing-php-memory-limits) is high (>= 256) or you may see a white screen of death._
 
 
 ### Print content without certain fields.
@@ -27,21 +27,30 @@ Look at the comments at the top of the node.html.twig template. The comments det
 
 ### Print fields individually.
 
-1. Find ```{{ content | without('field_tags') }} ``` from the previous step and change it to ```{{ content | without ('field_tags', 'body') }}```
+1. Find ```{{ content | without('field_tags') }} ``` from the previous step and change it to ```{{ content | without ('field_tags', 'field_image') }}```
 
     This removes the tags and the body fieds.
 
 
-2. Add the following towards the end of your file but before the final `</article>` tag.
+2. Add the following directly above `{{ content | without ('field_tags', 'body') }}`.
 
     ```twig
     <div class="sidebar">
       {{ content.field_tags }}
-      {{ content.body }}
+      {{ content.field_image }}
     </div>
     ```
 
-    You should now see your Tags and Body fields inside a div with class `sidebar`.
+    You should now see your Tags and Image fields inside a div with class `sidebar`. 
+    
+3. Add a little styling to **css-stuff.css** to get the full effect.
+
+    ```css
+    .node__content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    ```
 
 
 ### Explore.
@@ -76,3 +85,4 @@ The `.` syntax in twig is a shorthand for a number of PHP methods and functions.
 + Why do you keep telling me to delete my kint statements?
 
 ## Done ☺
+Next stop: [Excercise 9 - Twig Classes](exercise_09-twig-classes.md)
