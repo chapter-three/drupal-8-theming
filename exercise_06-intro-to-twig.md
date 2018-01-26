@@ -61,9 +61,8 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the â
 
 1. Inspect the **node.html.twig** template, review the comments and variables.
 
-2. When editing the Acme theme's **node.html.twig**, locate the line with the ``{{ content }}``
-
-3. Add a line to output the the node's bundle type (from step 1) before the ``{{ content }}``: 
+3. Add a line to output the the node's bundle type before ``  <div{{ content_attributes.addClass('node__content') }}>
+``: 
 
 	```twig
 	<strong>{{ node.bundle|upper }}</strong>
