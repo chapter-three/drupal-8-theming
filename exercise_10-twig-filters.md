@@ -6,7 +6,7 @@
 
 ### Using filters
 
-Lets use our node title to test some filters.
+[Twig filters](https://twig.symfony.com/doc/2.x/filters/index.html) allow you to make changes to markup right in the template. Let's use our node title to test some string filters.
 
 1. First, we want to get the node title as a string.
 
@@ -15,7 +15,7 @@ Lets use our node title to test some filters.
 1. Near your other variable declaration in your theme's **node.html.twig** add:
 
     ```twig
-    {%  set title_string = node.getTitle() %}
+    {%  set title_string = node.title %}
     ```
  
 
@@ -29,7 +29,10 @@ Lets use our node title to test some filters.
     ```
 
 
+3. If you have time, try creating arrays, loops and object to test some of the other amazing filters for twig See: https://twig.symfony.com/doc/2.x/filters/index.html.
+
 ## Questions you may have...
-+ Why didn't you use `label` ?
++ Why didn't you use `node.label` or `node.title`?
 
 ## Done ☺
+¡No Pare! !Sigue! !Sigue! [Excercise 11 - Twig Blocks](exercise_11-twig-block.md)
