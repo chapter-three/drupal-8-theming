@@ -1,4 +1,4 @@
-#### Drupal 8 Themeing
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 6: 
 

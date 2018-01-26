@@ -5,13 +5,17 @@ Notes:
 
 * All terminal commands are run from the Drupal root. 
 
+* `$` indicates a prompt. You do not need to type it into the terminal window 
+
+* `MYDRUPAL` refers to the Drupal root directory or base url
+
 * Feel free to ask any of the "Questions you may have ..." someone probably asked the question before!
 
 * See a mistake or type? Submit a pull request on Github! 
 
 ## Exercises
  
-[Excercise 1 - Set up Drupal](exercise_01-intro-debug.md)
+[Excercise 1 - Local Setup](exercise_01-intro-debug.md)
 
 [Excercise 2 - Add Content](exercise_02-add-content.md)
 
@@ -27,7 +31,7 @@ Notes:
 
 [Excercise 8 - Dot Syntax](exercise_08-twig-dot-syntax.md)
 
-[Excercise 9 - Twig Classes](exercise_09-twig classes.md)
+[Excercise 9 - Twig Classes](exercise_09-twig-classes.md)
 
 [Excercise 10 - Twig Filters](exercise_10-twig-filters.md)
 
@@ -48,5 +52,24 @@ Notes:
 [Excercise 18 - Custom Theme Settings 1](exercise_18-theme-settings1.md)
 
 [Excercise 19 - Custom Theme Settings 2](exercise_19-theme-settings2.md)
+
+## Style Guides for Contibutors
+
+###### Path to files and directories.
+
+**MYDRUPAL/themes** Path to files and directories.
+
+###### Name of file or directory
+**node.html.twig**
+
+###### Code.
+
+```bash
+ $ cd drupal
+```
+
+###### Url
+*http://MYDRUPAL/admin/config*
+
 
 ## Done ☺

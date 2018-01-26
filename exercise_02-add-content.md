@@ -1,4 +1,4 @@
-#### Drupal 8 Theming
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 2: 
 
@@ -19,7 +19,7 @@ It’s hard to theme the content of a site when there is no content. So, before 
     2. Body: `We’re preparing to launch a new Drupal website full of interesting articles like this one.`  (Or filler text from wherever you want.)
     3. Tags: `website, Drupal`
     4. Upload an Image of your choice with Alternative text of your choice.
-    5. Click the **Save and publish** button.
+    5. Click the **Save** button.
 
 ## Auto Generate Content
 
@@ -78,3 +78,4 @@ The above process is fine for one or two items, but what if you need to test out
 + 
 
 ## Done ☺
+[Excercise 3 - Contrib Themes](exercise_03-contrib-themes.md) is next!

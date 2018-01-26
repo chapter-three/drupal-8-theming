@@ -1,4 +1,4 @@
-#### Drupal 8 Theming
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 4: 
 
@@ -9,20 +9,21 @@ To create a new theme for Drupal 8, the only real requirement is to make sure yo
 As long as you have your .info.yml file in place with a few keys in place, you have a theme (although if thats all you have in place, it's not going to be a pretty theme).
 
 ### Create the theme folder and "YaML" file
-1. Locate the _/themes_ folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level _/modules_ and _/themes_ folders.
+1. Locate the **MYDRUPAL/themes** folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level **MYDRUPAL/modules** and **MYDRUPAL/themes** folders.
 
 
 2. Create a new folder and call it `acme`
 
-```bash
-$ cd MYDRUPAL
-$ mkdir themes/acme                 
-```
-3. In that folder create a new file. It should be called _acme.info.yml_
+    ```bash
+    $ cd MYDRUPAL
+    $ mkdir themes/custom 
+    $ mkdir themes/custom/acme                 
+    ```
+3. In that folder create a new file. It should be called **acme.info.yml**
 
-```bash
-$ touch themes/acme/acme.info.yml
-```
+    ```bash
+    $ touch themes/custom/acme.info.yml
+    ```
 4. Add the following lines to that file
 
 	```
@@ -47,10 +48,13 @@ $ touch themes/acme/acme.info.yml
  	  page_top: 'Page top'
  	  page_bottom: 'Page Bottom'
 	```
-5. Go to /admin/appearance and under the Acme theme choose "Install and set as default".
+
+5. Clear cache.
+
+6. Go to /admin/appearance and under the Acme theme choose "Install and set as default".
 
 ## Things we might find in a .info.yml file
-The following keys are items that we will often find in a *.info.yml file. Some are optional, some are requiered. These keys provide meta-data about your theme, and define some of the basic functionality.
+The following keys are items that we will often find in a `*.info.yml` file. Some are optional, some are requiered. These keys provide meta-data about your theme, and define some of the basic functionality.
 
 1. `name` **Required** 
 The human readable name will appear on the Appearance page, where you can activate your theme.
@@ -74,7 +78,7 @@ The human readable name will appear on the Appearance page, where you can activa
     
 2. The `libraries` key can be used to add asset libraries to all pages where the theme is active.
 	
-	```
+	```yml
 	libraries:
 	  - THEMENAME/global-styling
 	  - THEMENAME/LIBRARY-NAME
@@ -92,7 +96,10 @@ Theme libraries contain css and/or javascript. Theme libraries are declared in a
 	```
 	
 5. `ckeditor_stylesheets` will allow you to have custom ckeditor styles attached to your theme
+
 6. `quickedit_stylesheets` will allow you to have custom styles and javascript attached to the quickedit functionality
+
+7. Go to the home page and observe your beautiful new theme.
 
 
 ## Questions you may have...
@@ -100,3 +107,5 @@ Theme libraries contain css and/or javascript. Theme libraries are declared in a
 + Why are some regions in `''` and others not?
 
 ## Done ☺
+[Excercise 5 - Libraries](exercise_05-libraries.md) awaits!
+

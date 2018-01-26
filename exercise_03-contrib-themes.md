@@ -1,4 +1,4 @@
-#### Drupal 8 Theming
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 3: 
 
@@ -8,7 +8,7 @@ This is where most themers will start their career. Let someone else do the work
 
 ### Basic steps of installing a theme
 
-1. **Download and extract the theme files or use Drush/Drupal console to download.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the the theme is compatible with Drupal 8.
+1. **User Composer to Download and extract the theme files.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the the theme is compatible with Drupal 8.
 
 2. **Read directions and enable the theme.** Make sure to read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" link in the main Administration menu of your site. 
 
@@ -17,15 +17,21 @@ This is where most themers will start their career. Let someone else do the work
 If you run into problems, check the theme's issue queue and search the forums. If your problem hasn't already been addressed, post a question and someone will try to help you out.
 
 ## Install our first contrib...
-1. Download and add the latest recommended release of _Radix_:  http://drupal.org/project/radix 
-2. Also download and add the latest recommended release of the _Mayo_ theme: https://www.drupal.org/project/mayo
-3. Read `README.txt` inside of the _mayo_ folder to know what to expect. 
+1. Download and add the latest recommended release of *Radix*:  http://drupal.org/project/radix 
+
+    `$ composer require drupal/radix`
+
+2. Also download and add the latest recommended release of the *Mayo* theme: https://www.drupal.org/project/mayo
+
+    `$ composer require drupal/mayo`
+
+3. Read `README.txt` inside of the *mayo* folder to know what to expect. 
 	
-	*You can ignore the npm instructions for now.*
-4. Enable the _Mayo_ theme:
+4. Enable the *Mayo* theme:
     1. Click on **Appearance** at the top.
-    2. Find _Mayo_ near the bottom and click **Install and set default**.
-5. Clear your cache through ``drush cr`` or by going to Configuration > Performance and clicking **Clear all caches**.
+    2. Find *Mayo* near the bottom and click **Install and set default**.
+
+5. Clear your cache.
 
 
 ### Typical structure of a theme
@@ -58,8 +64,12 @@ If you run into problems, check the theme's issue queue and search the forums. I
     3. Set sidebar to use round corners.
     4. Tweak the color scheme by utilizing the color wheel.
 
+4. Many settings are theme-specific. Visit the settings pages of other themes, like *Seven* to compare.
+
 
 ## Questions you may have...
 + How do I choose a theme?
 
 ## Done ☺
+Woo hoo! Time for [Excercise 4 - Dot Info File](exercise_04-dot-info.md)!
+

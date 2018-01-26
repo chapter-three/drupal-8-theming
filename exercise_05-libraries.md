@@ -1,10 +1,10 @@
-#### Drupal 8 Theming
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 5: 
 
 ## Drupal asset libraries: adding css and javascript to your site
 
-In Drupal 8, "Asset Libraries" are used as the system for loading stylesheets (CSS) and JavaScript (JS). The libraries system that you use in your theme is the same framework used by modules and core. Asset libraries can contain one or more CSS assets, one or more JS assets and one or more JS settings.
+In Drupal 8, "Asset Libraries" are used as the system for loading stylesheets (CSS) and JavaScript (JS). The libraries system that you use in your theme is the same framework used by modules and core. Asset libraries can contain one or more CSS assets, one or more JS assets, and one or more JS settings.
 
 Drupal follows this high-level principle: CSS and javascript are only loaded if you tell Drupal it should load them. Drupal has stopped assuming that it should load all assets on all pages, because this is bad for front-end performance.
 
@@ -15,8 +15,8 @@ The biggest difference from Drupal 7 is when it comes to Javascript loaded on pa
 The basic process breaks down into 3 steps
 
 1. Save the CSS or JS to a file.
-2. Define a "library" in a `*.libraries.yml file`, which contains a reference to the CSS and/or JS files.
-3. "Attach" the library to a render array in a hook using the #attached attribute, by including it in a template, or add the library as a dependency to the theme's `*.info.yml` file.
+2. Define a "library" in a `*.libraries.yml` file, which contains a reference to the CSS and/or JS files.
+3. "Attach" the library to a render array in a hook using the `#attached` attribute, by including it in a template, or add the library as a dependency to the theme's `*.info.yml` file.
 
 
 ## Create a library
@@ -25,14 +25,14 @@ In the following steps we will create a libraries.yml file, declare our library 
 
 1. Navigate to your theme's root directory 
 
-```bash
-$ cd MYDRUPAL
-```
+    ```bash
+    $ cd MYDRUPAL
+    ```
 2. Create a file called **acme.libraries.yml** and open that file in your preferred code editor.
 
-```bash
-$ touch themes/acme/acme.libraries.yml
-```
+    ```bash
+    $ touch themes/custom/acme/acme.libraries.yml
+    ```
 
 3. Add the following code to that file:
 	
@@ -51,19 +51,19 @@ $ touch themes/acme/acme.libraries.yml
    
 4. Navigate back to your theme's root directory, and create a folder called **"css"** (if one doesn't already exist).
 
-```bash
-$ mkdir themes/acme/css
-```
-5. Create two files in that directory. One called `css-stuff.css` and one called `css-stuff-print.css`
+    ```bash
+    $ mkdir themes/custom/acme/css
+    ```
+
+5. Create two files in that directory. One called **css-stuff.css** and one called **css-stuff-print.css**
 
 
+    ```bash
+    $ touch themes/custom/acme/css/css-stuff.css
+    $ touch themes/custom/acme/css/css-stuff-print.css
+    ```
 
-```bash
-$ touch themes/acme/css/css-stuff.css
-$ touch themes/acme/css/css-stuff-print.css
-```
-
-6. Open them both and **add any high level css you want**. For `css-stuff.css` you could add:
+6. Open them both and add any high level css you want. For **css-stuff.css** you could add:
 
 	```css
 	body {
@@ -89,7 +89,7 @@ $ touch themes/acme/css/css-stuff-print.css
 
 8. We need to make our theme aware of our newly declared library before anything will happen.
 
-9. Add the following code to your _acme.info.yml_ file
+9. Add the following code to your **acme.info.yml** file
 
 	```
 	libraries:
@@ -97,7 +97,7 @@ $ touch themes/acme/css/css-stuff-print.css
 	```
 10. Clear your caches and you should now see your css styles in place.
 
-If everything worked, you should see output like the following in the head section on all pages of your theme.
+    If everything worked, you should see output like the following in the head section on all pages of your theme.
 
 ```html
 @import url("/themes/acme/css/css-stuff.css?of7sd1");
@@ -253,3 +253,5 @@ libraries-extend:
 
 
 ## Done ☺
+Doing great! Proceed to [Excercise 6 - Intro to Twig](exercise_06-intro-to-twig.md)
+

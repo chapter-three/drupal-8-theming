@@ -1,4 +1,4 @@
-#### Drupal 8 Theming
+#### [Drupal 8 Theming](README.md)
 
 # Exercise 1: Local Setup
 
@@ -9,6 +9,11 @@ Theming in Drupal is taking the processed data from Drupal, and outputting it ou
 By the end of this workshop, participants should be able to understand and use common theme components for Drupal 8 and understand the major changes between Drupal 7 and Drupal 8 theming.
 
 ## I. Enable theme debugging and other local settings.
+
+### If using ADD, delete site-specific folder.
+Acquia Dev Desktop assumes a multi-site installation. For consistency across systems, we'll use the standard approach.
+    
+  1. Delete **MYDRUPAL/sites/MYDRUPAL.dd** folder
 
 ### Make files writable.
 1. Using your terminal, or through your display, locate your **settings.php** file. The file is usually found at **MYDRUPAL/sites/default/settings.php**. 
@@ -23,8 +28,15 @@ By the end of this workshop, participants should be able to understand and use c
 	```
 
 ### Allow local settings and services, disable caches and enable debugging
+3. Open up the **settings.php** file in your preferred code editor and uncomment the following lines (~ lines 782-785 in Drupal 8.4+):
 
-1. Download this repo's [settings.local.php](settings.local.php) and place it at MYDRUPAL/sites/default/settings.local.php
+	```php
+   # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+   #   include $app_root . '/' . $site_path . '/settings.local.php';
+   # }
+    ```
+
+2. Download this repo's [settings.local.php](settings.local.php) and place it at MYDRUPAL/sites/default/settings.local.php
 
 2. Download this repo's [local.services.yml](local.services.yml) and place it at MYDRUPAL/sites/default/local.services.yml
 
@@ -94,9 +106,11 @@ Throughout these exercises you'll be asked to clear cache or registry in order t
  
 **Ways to clear registry (aka "Clear Cache"):**
 
-* use ``$ drush cr`` in the terminal
+* use ``$ drush cr`` in the terminal*
 * go to Configuration > Performance and Clear All Caches. 
 * with admin\_toolbar\_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
+
+*Note that if you use Acquia Dev Desktop, you may have to run your drush commands through the Terminal Link in its UI.
 
 ## Questions
 + What is drush and what is `drush cr`?
@@ -105,3 +119,4 @@ Throughout these exercises you'll be asked to clear cache or registry in order t
 + Why don't we use settings.php ?
 
 ## Done ☺
+On to [Excercise 2 - Add Content](exercise_02-add-content.md)!
