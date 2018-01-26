@@ -43,7 +43,7 @@ In the following steps we will create a libraries.yml file, declare our library 
         theme:
           css/css-stuff.css: {}
           css/css-stuff-print.css: { media: print }
-          //fonts.googleapis.com/css?family=Abhaya+Libre: { type: external }
+          //fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans: { type: external }
 
    ```
    
@@ -67,15 +67,20 @@ In the following steps we will create a libraries.yml file, declare our library 
 
 	```css
 	body {
-	  background-color: gray;
-	} 
-	
-	h2 {
-      font-family: 'Abhaya Libre', serif;
+      background-color: #e7e7e7;
+      font-family: 'Open Sans', serif;
+      padding: 30px;
     }
-    
+
+    h2 a {
+      background-color: #0c89af;
+      color: white;
+      font-family: 'Abhaya Libre', serif;
+      padding: 3px;
+      text-decoration: none;
+    }    
 	```
-	and for `css-stuff-print.css`, you could add: 
+	and for **css-stuff-print.css**, you could add: 
 	
 	```css
 	body {
@@ -85,7 +90,7 @@ In the following steps we will create a libraries.yml file, declare our library 
 	```
 	Go crazy if you want!
    
-7. Navigate back to your theme root directory and open your _acme.info.yml_ file
+7. Navigate back to your theme root directory and open your **acme.info.yml** file
 
 8. We need to make our theme aware of our newly declared library before anything will happen.
 
@@ -110,18 +115,18 @@ In the following steps we will create a libraries.yml file, declare our library 
 ## Attach Library to a template
 In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page we should use the `attach_library()` function in twig to add js or css.
 
-1. Create a folder called `js` in your theme root and add a javascript file called **custom-widget.js**
+1. Create a folder called **js** in your theme root and add a javascript file called **custom-widget.js**
 
 ```bash
-$ mkdir themes/acme/js
-$ touch themes/acme/js/custom-widget.js
+$ mkdir themes/custom/acme/js
+$ touch themes/custom/acme/js/custom-widget.js
 
 ```
 
 2. Create a `css` file in the **css** folder called **custom-widget.css**.
 
 ```bash
-$ touch themes/acme/css/custom-widget.css
+$ touch themes/custom/acme/css/custom-widget.css
 
 ```
 
@@ -138,7 +143,8 @@ $ touch themes/acme/css/custom-widget.css
     
     ```css
     article { 
-      background: white; 
+      background: white;
+      padding: 10px;
     }
     ```
     
@@ -157,50 +163,48 @@ $ touch themes/acme/css/custom-widget.css
          - core/jquery
     ```      
     
-1. Navigate to **MYDRUPAL/core/themes/classy/templates/content/** and look for `node.html.twig`. 
+1. Navigate to **MYDRUPAL/core/themes/classy/templates/content/** and look for **node.html.twig**. 
 
-2. Make a copy of node.html.twig and paste it in at **MYDRUPAL/themes/acme/templates/node** . 
+2. Make a copy of **node.html.twig** and paste it in at **MYDRUPAL/themes/custom/acme/templates/node**. Then, because you have added a new file, you'll need to clear cache. 
 
 ```bash 
-$ mkdir themes/acme/templates
-$ mkdir themes/acme/templates/node
-$ cp core/themes/classy/templates/content/node.html.twig themes/acme/templates/node/node.html.twig
+$ mkdir themes/custom/acme/templates
+$ mkdir themes/custom/acme/templates/node
+$ cp core/themes/classy/templates/content/node.html.twig themes/custom/acme/templates/node/node.html.twig
+$ drush cr
 ```
     
-4. Add the following to **node.html.twig** near the top
+4. Add the following to your theme's new **node.html.twig** near the top
     
     ```twig
     {% if node.bundle == 'article' %}
       {{ attach_library('acme/widget') }}
     {% endif %}
     ```
-6. Verify that custom-widget.js and custom-widget.css have loaded on the article pages but NOT on basic pages.     
+6. Verify that **custom-widget.js** and **custom-widget.css** have loaded on the article pages but NOT on basic pages.     
 
 ## Overriding and Removing libraries
 
 ### Removing css or javascript
 
 
-If we are using a base theme, it is very possible that some css or js is coming over from the base theme that we just do not want to use in our theme. Or sometimes there is some css coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed", you may find yourself in a situation where a contrib module or other library is just adding to much. We can remove stylessheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml file
+If we are using a base theme, it is very possible that some css or js is coming over from the base theme that we just do not want to use in our theme. Or sometimes there is some css coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed", you may find yourself in a situation where a contrib module or other library is just adding to much. We can remove stylesheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml file
 
 **This method is for removing individual css or javascript files**
 
-3. Take a look at the css that is being loaded on your site as a logged in user. Note that `/core/assets/vendor/jquery.ui/themes/base/dialog.css` and 
-  `/core/themes/classy/css/components/breadcrumb.css` are being loaded.
+3. Take a look at the css that is being loaded on your site as a logged in user. Note that **/core/assets/vendor/jquery.ui/themes/base/dialog.css** and 
+  **/core/themes/classy/css/components/breadcrumb.css** are being loaded.
 
-1. Navigate to your theme root and open the **acme.info.yml** file
+1. Navigate to your theme root and open the **acme.info.yml** file.
 
-2. In order to remove the files, we first need know which libraries they came from.
-
-
-4. Place the following code in your file
+4. Place the following code in your **acme.info.yml** file.
 
 	```
 	stylesheets-remove:
-	  - core/assets/vendor/jquery.ui/themes/base/dialog.css
+	  - core/misc/active-links.css
 	  - '@classy/css/components/breadcrumb.css'
 	```
-	In this example we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that stylesheets-remove is technically deprecated and will be removed in Drupal 9.
+	In this example we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
 
 
 ### Overriding css or javascript
