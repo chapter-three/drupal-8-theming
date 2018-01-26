@@ -65,7 +65,7 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the â
 ``: 
 
 	```twig
-	<strong>{{ node.bundle|upper }}</strong>
+	<h4>{{ node.bundle}}</h4>
 	```
 
 4. Clear cache, visit (or refresh) a node.
