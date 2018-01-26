@@ -10,13 +10,13 @@ Often we want to include SVGs in our project because they load fast and can be e
 	
 ```bash
 $ cd MYDRUPAL
-$ mkdir themes/acme/images
+$ mkdir themes/custom/acme/images
 ```
 	
 2. Copy and paste svg code into a file called **mysvg.svg** inside your newly created **images** folder
 
 ```bash
-$ touch themes/acme/images/mysvg.svg
+$ touch themes/custom/acme/images/mysvg.svg
 ```
 
 You can use an svg on your machine or the example below. 
@@ -42,3 +42,4 @@ You can use an svg on your machine or the example below.
 
 
 ## Done ☺
+Onward! [Excercise 13 - Preprocess Function](exercise_13-preprocess.md)

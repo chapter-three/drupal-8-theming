@@ -13,7 +13,7 @@ For this we will utilize two additional files. **acme.settings.yml** and **theme
 
     ```bash 
     $ cd MYDRUPAL
-    $ touch themes/acme/acme.settings.yml
+    $ touch themes/custom/acme/acme.settings.yml
     ```
 
 3. Add the following code:
@@ -28,7 +28,7 @@ For this we will utilize two additional files. **acme.settings.yml** and **theme
 
     ```bash 
     $ cd MYDRUPAL
-    $ touch themes/acme/theme-settings.php
+    $ touch themes/custom/acme/theme-settings.php
     ```
     
 6. Add the following code to that file.
@@ -60,7 +60,7 @@ For this we will utilize two additional files. **acme.settings.yml** and **theme
 8. Feel free to customize those values. We will use them in the next exercises.
 
 ## Questions you may have...
-+ What is `features` in the *.settings.yml?
++ What is `features` in the ***.settings.yml**?
 + Where do I find documentation for creating forms?
 
 

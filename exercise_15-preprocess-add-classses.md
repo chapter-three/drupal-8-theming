@@ -6,11 +6,11 @@
 
 A major job of any theme is to give us control over classes. We use classes to control styling, layouts, and javascript. Drupal and Twig give us many different ways to do this.
 
-In this exercise, we are going to use **hook\_preprocess\_html** to gain control over the classes attached to our body tag.
+In this exercise, we are going to use `hook_preprocess_html` to gain control over the classes attached to our body tag.
 
 ### Add classes to our body tag
 
-1. Navigate to your theme root, and open your _acme.theme_ file. 
+1. Navigate to your theme root, and open your **acme.theme** file. 
 
 2. Add the following code:
 
@@ -29,11 +29,11 @@ In this exercise, we are going to use **hook\_preprocess\_html** to gain control
     }
 	```
 
-4. Next, add the following line at the top of your _acme.theme_ below `<?php`. 
+4. Next, add the following line at the top of your **acme.theme** below `<?php`. 
 
 	`use Drupal\Component\Utility\Html;`
 
-5. Then add the following code inside of your preprocess_html function, below the 'my-class' line
+5. Then add the following code inside of your `preprocess_html` function, below the `my-class` line
 	
 	```php
 	...	
