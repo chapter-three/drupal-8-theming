@@ -25,19 +25,7 @@ It’s hard to theme the content of a site when there is no content. So, before 
 
 The above process is fine for one or two items, but what if you need to test out what 50 nodes look like in a view? What if you need to know how the page is going to look with a couple dozen comments all at different levels? Are you going to create each one of those items by hand? Hopefully not. Luckily, we have a handy module that has already been ported to D8 and is (mostly) able to take care of this work for us. Enter the "Devel" and "Devel Generate" module.
 
-### For content
-
 1. Enable the **Devel generate** module if you have not already.
-1. Click "Configuration" in the Admin menu
-2. In the "Development" group select "Generate content" 
-	1. Select "Content Type: `Article`
-	2. How many nodes would you like to generate?: `100`
-	3. How far back in time should the nodes be dated?: `1 year`
-	4. (If comments enabled) Maximum number of comments per node: `5`
-	4. Maximum number of words in titles: `10` 
-	5. Leave the rest at their default values
-	3. Click the **Generate** button.
-
 
 ### For vocabularies and taxonomy terms
 1. Click "Configuration" in the Admin menu
@@ -50,6 +38,19 @@ The above process is fine for one or two items, but what if you need to test out
 	1. Vocabularies: **Select any one vocabulary**
 	2. Number of terms?: `10`
 	2. Maximum number of characters in vocabulary names: `15`
+	3. Click the **Generate** button.
+
+
+### For content
+
+1. Click "Configuration" in the Admin menu
+2. In the "Development" group select "Generate content" 
+	1. Select "Content Type: `Article`
+	2. How many nodes would you like to generate?: `100`
+	3. How far back in time should the nodes be dated?: `1 year`
+	4. (If comments enabled) Maximum number of comments per node: `5`
+	4. Maximum number of words in titles: `10` 
+	5. Leave the rest at their default values
 	3. Click the **Generate** button.
 
 
