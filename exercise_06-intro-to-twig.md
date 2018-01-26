@@ -77,3 +77,5 @@ Actually, There is a third syntax, used for comments: `{#`. Just like with the â
 
 
 ## Done â˜º
+
+Get your [Excercise 7 - Regions](exercise_07-twig-new-region.md) on.
