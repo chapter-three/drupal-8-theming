@@ -8,7 +8,7 @@ Drupal has a number of handy functions specifically designed for the manipuation
 ## Manipulating Classes with Twig
 
 ### Inpspect the `attributes` array.
-1. Add `{{ kint(attributes) }}` in your theme's **node.html.twig**. Review the array and its children.
+1. Add `{{ kint(attributes) }}` in your theme's **node.html.twig**. Review the object and its properties and methods. Note that `addClass()` is an available public method.
 
 ### Add a class.
 2. Change `<article{{ attributes.addClass(classes) }}>` to
@@ -22,8 +22,8 @@ Drupal has a number of handy functions specifically designed for the manipuation
 
     ```bash
     $ cd MYDRUPAL
-    $ mkdir themes/acme/templates/html
-    $ cp core/themes/classy/templates/layout/html.html.twig themes/acme/templates/html/html.html.twig
+    $ mkdir themes/custom/acme/templates/html
+    $ cp core/themes/classy/templates/layout/html.html.twig themes/custom/acme/templates/html/html.html.twig
     ```
 3. Clear Cache
 
@@ -44,9 +44,11 @@ Drupal has a number of handy functions specifically designed for the manipuation
 ### Create a new custom variable.
 Let's create a special body class for the user role.
 
-3. Use `{{ kint(user) }}` to inspect the user variable in **html.html.twig**.  Observe the path to get the roles array.
+1. Note that `logged_in` is one of the variables available in **html.html.twig** according to its comments. 
 
-4. Use `{{ kint(logged_in) }}` to see the value of this variable when logged in and logged out. 
+2. Use `{{ kint(user) }}` to inspect the user variable in **html.html.twig**.  Search the kint for `account`. Note that the method `getAccount()` is public. If we look back at Exercise 8, we see that we can use {{ user.account}} because of that sweet, sweet Twig magic.
+
+4. Use `{{ kint(user.account}}`. Search for `roles`. Look at that! Our friends at D.O. also made `getAccount()` public. Now we can do the thing. 
 
 2. Below ```{% set myclasses = ['red', 'green', 'blue'] %}``` add 
 
