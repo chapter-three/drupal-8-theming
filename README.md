@@ -1,7 +1,29 @@
 # Drupal 8 Theming Training
 
+## Description
 
-Notes:
+Are you struggling with Drupal 8 theming? New to Drupal or Drupal 8? 
+
+Let's take it from the top!
+
+This hands on training will take you step-by-step through the process of creating a custom theme in Drupal 8.
+
+Along the way, we'll cover:
+
+- Setting up Your local development environment 
+- Working with YAML files
+- Adding assets responsibly
+- Getting, modifying and display Drupal data in the template
+- Cool Twig tips and Tricks
+- Preprocessing template functions and hooks
+- Basic OOPHP principles
+- Kint, theme_debug and other changes to debugging
+- Leveraging new Drupal 8 site building paradigms to make theming easier
+- Where to find help
+
+Over the course of the day we will work through exercises together so that by the end of the day you’ll have a skeleton of your own working Drupal 8 theme. There will also be time for Drupal Q&A
+
+## Notes:
 
 * All terminal commands are run from the Drupal root. 
 
@@ -11,7 +33,18 @@ Notes:
 
 * Feel free to ask any of the "Questions you may have ..." someone probably asked the question before!
 
-* See a mistake or type? Submit a pull request on Github! 
+* See a mistake or typo? Submit a pull request on Github! 
+
+* Common hiccups are:
+  * Syntax errors
+  * Too many or not enough spaces in .yml files
+  • Cache not cleared
+  * PHP memory limit not high enough (>= 256) 
+    * settings.php
+       - `ini_set('memory_limit', '512M');`
+    * php.ini 
+      - `'memory_limit' = '512M'`
+
 
 ## Exercises
  
@@ -53,7 +86,7 @@ Notes:
 
 [Excercise 19 - Custom Theme Settings 2](exercise_19-theme-settings2.md)
 
-## Style Guides for Contibutors
+## Style Guides for Contributors
 
 ###### Path to files and directories.
 
