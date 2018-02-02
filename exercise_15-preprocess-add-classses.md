@@ -20,7 +20,7 @@ In this exercise, we are going to use `hook_preprocess_html` to gain control ove
     }
 	```
 
-3. We want to add our own classes to the body tag. This first one will be for all pages, the second one will set a class for each region that has content. Once completed, save and clear caches. Then view the source code of a page and confirm that our new class is applied to the body tag.
+3. We want to add our own classes to the body tag. This first one will be for all pages. The second one will set a class for each region that has content. Once completed, save and clear caches. Then view the source code of a page and confirm that our new class is applied to the body tag.
 
 	```php
     // Add 'my-class' to all pages.
@@ -51,13 +51,14 @@ In this exercise, we are going to use `hook_preprocess_html` to gain control ove
 	...
 	```
 	
-	We are going to use the `Html` PHP Class and its `getClass` method to process our values and make sure they are properly formatted class names. This is the replacement to drupal\_html\_class() and drupal\_clean\_css_identifier(). Bacause we use this, we have to make sure to declare our dependecy on that Class. That is why we added the code in part 4. Otherwise, php would not know what you are talking about and we would get a delightful php fatal error.
+	We are going to use the `Html` PHP Class and its `getClass` method to process our values and make sure they are properly formatted class names. This is the replacement to drupal\_html\_class() and drupal\_clean\_css_identifier(). Because we use this, we have to make sure to declare our dependency on that class. That is why we added the code in part 4. Otherwise, PHP would not know what you are talking about and we would get a delightful PHP fatal error.
 
 
-Go back to your website and refresh. Check out our body tag. Do you see the active region classes. This may be helpful if you want to trigger javascript or css in one region based on if there is stuff in another region.
+Go back to your website and refresh. Check out our body tag. Do you see the active region classes? This may be helpful if you want to trigger javascript or CSS in one region based on if there is stuff in another region.
 
 ## Questions you may have...
 + How would I know to use `use Drupal\Component\Utility\Html;`?
 
 
 ## Done ☺
+Can you believe it? [Exercise 16 - Form Alter](exercise_16-form-alter.md)

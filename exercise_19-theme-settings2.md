@@ -4,7 +4,7 @@
 
 ## Apply our theme settings to our custom variables
 
-Now that we have created some custom theme settings and we have the ability to customize them through the UI, lets put them to use. We will capitalize on the functionality we created in an earlier excercise. We will alter our **preprocess_page()** to include the "copyright_holder" variable that will be customizable with one of our new theme settings.
+Now that we have created some custom theme settings and we can customize them through the UI, let's put them to use. We will capitalize on the functionality we created in an earlier exercise. We will alter our **preprocess_page()** to include the "copyright_holder" variable that will be customizable with one of our new theme settings.
 
 ### Customize the copyright holder
 
@@ -30,3 +30,5 @@ We have declared our copyright_holder in our theme's settings, and it will overr
 
 
 ## Done ☺
+
+Congratulations! You're all done!

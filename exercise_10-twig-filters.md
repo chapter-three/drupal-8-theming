@@ -35,4 +35,4 @@
 + Why didn't you use `node.label` or `node.title`?
 
 ## Done ☺
-¡No Pare! !Sigue! !Sigue! [Excercise 11 - Twig Blocks](exercise_11-twig-block.md)
+¡No Pare! !Sigue! !Sigue! [Exercise 11 - Twig Blocks](exercise_11-twig-block.md)

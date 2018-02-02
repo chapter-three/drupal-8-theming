@@ -6,7 +6,7 @@
 
 Twig introduces another "block" concept within Drupal. However, a Twig "block" is not the same as a Drupal block.
 
-A Twig "block" is an element in the template file that can be overridden, independently from its inherited (parent) template. This means, I can reuse the majority of a parent template and just change the one part I need to change. In Drupal 7, you would have to copy the whole template into a new file and be stuck trying to manage two independent templates or use PHP to conditionally include a new file.
+A Twig "block" is an element in the template file that can be overridden, independently from its inherited (parent) template. This means I can reuse the majority of a parent template and just change the one part I need to change. In Drupal 7, you would have to copy the whole template into a new file and be stuck trying to manage two independent templates or use PHP to conditionally include a new file.
 Twig "blocks" are used for inheritance and act as placeholders and replacements at the same time.
 
 [Twig block official documentation](http://twig.sensiolabs.org/doc/tags/extends.html)
@@ -15,7 +15,7 @@ http://twig.sensiolabs.org/doc/tags/extends.html
 	
 ### Twig block structure
 
-In the following example we have two Twig blocks one named `content` and the other named `other_content`.
+In the following example, we have two Twig blocks one named `content` and the other named `other_content`.
 
 ```twig
 {% block content %}
@@ -78,9 +78,9 @@ We are going to copy the default block twig template into our theme, rename it a
     -->
 	```
 	
-	These are the template suggestions for different components of the page. These come from our theme and twig debug enabling. Drupal is telling you exactly how you can name your new template files to make sure they affrect that component. The `x` at the start of a name refers to the template that is currently being used to build that component. Starting from the bottom of the list, the names are in order of priority override.
+	These are the template suggestions for different components of the page. These come from our theme and twig debug enabling. Drupal is telling you exactly how you can name your new template files to make sure they affect that component. The `x` at the start of a name refers to the template that is currently being used to build that component. Items lower on the list override higher ones.
 	
-6. So that it only effects the "Powered by Drupal" block, rename the `block.html.twig` file to `block--system-powered-by-block.html.twig`
+6. So that it only affects the "Powered by Drupal" block, rename the `block.html.twig` file to `block--system-powered-by-block.html.twig`
 
 
    ```bash
@@ -101,13 +101,13 @@ We are going to copy the default block twig template into our theme, rename it a
 
 7. Clear cache. 
 
-We only override the content inside the twig block name **"content"**, The rest of the items are still controlled by the default block.html.twig template file. If we had to make a change to all Drupal blocks, like add a wrapping div or a class to all blocks, we could make that change in our default template and it would still apply to our overridden template.
+We only override the content inside the twig block name **"content"**, The rest of the items are still controlled by the default block.html.twig template file. If we had to make a change to all Drupal blocks, like add a wrapping div or a class to all blocks, we could make that change in our default template, and it would still apply to our overridden template.
 
 
 ## Questions you may have...
 + What is the `|t` in our twig template?
 + What is the `{% trans %}` component in twig?
-+ Can I use all the Twig functions from Sensio labs?
++ Can I use all the Twig functions from SensioLabs?
 
 ## Done ☺
-... [Excercise 12 - Include SVG](exercise_12-twig-include-svg.md) ...
+... [Exercise 12 - Include SVG](exercise_12-twig-include-svg.md) ...

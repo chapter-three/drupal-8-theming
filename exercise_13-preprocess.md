@@ -6,7 +6,7 @@
 
 Don't make yourself responsible for updating every site on January 1st. Let the computer do the work for you and automatically set items, like the copyright date, to the current year. We will begin to dive into some more advanced elements of Drupal theming including preprocess functions and template variables. 
 
-What is a preprocess function? A preprocess function is a function that allows us to manipulate (add, edit, or remove) our data before it is processed by our template. Hence, the "pre" in preprocess. It's powered by `hook_preprocess()` function. `hook_preprocess_HOOK()` allows modules to preprocess theme variables, but for a specific theme hook, like node, page, or menu\_link. For our example we will manipulate the data before it goes to the `page` twig template **page.html.twig**, so we will use 
+What is a preprocess function? A preprocess function is a function that allows us to manipulate (add, edit, or remove) our data before our template processes it. Hence, the "pre" in preprocess. It's powered by `hook_preprocess()` function. `hook_preprocess_HOOK()` allows modules to preprocess theme variables, but for a specific theme hook, like node, page, or menu\_link. For our example, we will manipulate the data before it goes to the `page` twig template **page.html.twig**, so we will use 
 "hook\_preprocess\_**page**()"
 
 ### Create our .theme file
@@ -43,7 +43,7 @@ What is a preprocess function? A preprocess function is a function that allows u
 
 ### What year is it?
 
-Great, it’s printing our variable, but we’re still not much better off than simply adding a block to say the copyright date manually. Lets start adding some logic in **acme.theme**.
+Great, it’s printing our variable, but we’re still not much better off than simply adding a block to say the copyright date manually. Let's start adding some logic in **acme.theme**.
 
 1. Open **acme.theme** and add some php around our new variable so that it can print the current year instead of our filler message:
 	
@@ -58,11 +58,12 @@ Great, it’s printing our variable, but we’re still not much better off than 
 **Note that there is not a closing ?> at the end, but there should be a line of whitespace.**
 
 ##Questions you may have...
-+ Where did you find that function name? I never would have guessed that.
++ Where did you find that function name? I would never have guessed that.
 + What would happen if I didn’t check if a variable is set before printing it?
-+ Why don’t I close the php tags?
++ Why don’t I close the PHP tags?
 + Why does the new variable have a t() function around it?
 + What’s the best way to add markup and styles to our variable?
-+ Could I have done all this in the twig template?
++ Could I have done all this on the twig template?
  
 ##Done ☺
+[Exercise 14 - Template Suggestions](exercise_14-new-template-suggestions.md) is ready to bat.

@@ -4,24 +4,24 @@
 
 ## Contrib themes
 
-This is where most themers will start their career. Let someone else do the work for you and download something generic that can be modified to fit your needs. Contributed themes can be a great resource for learning new techniques and functionality, that you can implement in your own custom themes.
+This is where most themers will start their career. Let someone else do the work for you and download something generic that can be modified to fit your needs. Contributed themes can be a great resource for learning new techniques and functionality, which you can implement in your custom themes.
 
 ### Basic steps of installing a theme
 
-1. **User Composer to Download and extract the theme files.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the the theme is compatible with Drupal 8.
+1. **User Composer to Download and extract the theme files.** You can find themes on http://drupal.org/project/themes, as well as some external sites. Make sure the theme is compatible with Drupal 8.
 
 2. **Read directions and enable the theme.** Make sure to read any README files in your theme as well as the themes project page on drupal.org for any installation information. Visit the "Appearance" link in the main Administration menu of your site. 
 
 3. **Make it active and/or your default theme.** Click 'Install' to enable the theme. Click 'Set as default' or Install and set as default' to make this the chosen theme for your site.
 
-If you run into problems, check the theme's issue queue and search the forums. If your problem hasn't already been addressed, post a question and someone will try to help you out.
+If you run into problems, check the theme's issue queue and search the forums. If your problem hasn't already been addressed, post a question, and someone will try to help you out.
 
 ## Install our first contrib...
 1. Download and add the latest recommended release of *Radix*:  http://drupal.org/project/radix 
 
     `$ composer require drupal/radix`
 
-2. Also download and add the latest recommended release of the *Mayo* theme: https://www.drupal.org/project/mayo
+2. Also, download and add the latest recommended release of the *Mayo* theme: https://www.drupal.org/project/mayo
 
     `$ composer require drupal/mayo`
 
@@ -35,11 +35,11 @@ If you run into problems, check the theme's issue queue and search the forums. I
 
 
 ### Typical structure of a theme
-+ **MYTHEME.info.yml** - A theme must contain an .info.yml file to define the theme. Among other things the .info.yml files defines meta data, style sheets, and block regions. This is the only required file in the theme.
++ **MYTHEME.info.yml** - A theme must contain an .info.yml file to define the theme. Among other things, the .info.yml files define metadata, style sheets, and block regions. This is the only required file in the theme.
 
 + **MYTHEME.libraries.yml** - The .libraries.yml file is used to define JavaScript and CSS libraries that can be loaded by the theme.
 
-+ **MYTHEME.breakpoints.yml** - Breakpoints define where a design changes in order to respond to different devices. While the theme can use this file, its info can also be used by Drupal core to make adjustments to data it sends to the theme.
++ **MYTHEME.breakpoints.yml** - Breakpoints define where a design changes in response to different devices. While the theme can use this file, its info can also be used by Drupal core to make adjustments to data it sends to the theme.
 
 + **MYTHEME.theme** - The .theme file is equivalent to the old Drupal 7 template.php file. It is a PHP file that contains conditional logic and data (pre)processing of the output.
 
@@ -47,13 +47,13 @@ If you run into problems, check the theme's issue queue and search the forums. I
 
 + **logo.svg** - New to Drupal 8, logos are best saved as svg files and placed in the main level of your theme. Logos can also be uploaded at Appearance > Settings.
 
-+ **css/** or **styles/** - Drupal 8 core themes organize CSS files following the SMACCS style guide. For CSS files to be loaded, they must be defined in your .libraries.yml file. You can override or remove core and module css in your themes .info.yml file.
++ **css/** or **styles/** - Drupal 8 core themes organize CSS files following the SMACCS style guide. For CSS files to be loaded, they must be defined in your .libraries.yml file. You can override or remove core and module CSS in your themes .info.yml file.
 
 + **js/** or **script/** - JavaScript files are stored in the 'js' folder. For a theme to load JavaScript files, they must be defined in .libraries.yml file.
 
-+ **img/** or **images/** - It is good practice to store images in the 'images' sub folder.
++ **img/** or **images/** - It is good practice to store images in the 'images' subfolder.
 
-+ **templates/** - Templates provide HTML markup and some presentation logic. It is customary to place template files into sub category folders, such as **templates/node/** for node based templates.
++ **templates/** - Templates provide HTML markup and some presentation logic. It is customary to place template files into subcategory folders, such as **templates/node/** for node based templates.
 
 ## ... then we configure our theme
 1. Revisit the Appearance page and click **Settings** under the _Mayo_ theme.
@@ -71,5 +71,5 @@ If you run into problems, check the theme's issue queue and search the forums. I
 + How do I choose a theme?
 
 ## Done ☺
-Woo hoo! Time for [Excercise 4 - Dot Info File](exercise_04-dot-info.md)!
+Woo hoo! Time for [Exercise 4 - Dot Info File](exercise_04-dot-info.md)!
 

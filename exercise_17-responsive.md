@@ -74,7 +74,7 @@ We now have a Responsive image style, with the breakpoints matched to an image s
 
 1. Navigate to the Manage display page for the "Article" content type.
 
-2. Change the format for the `Image` field to use `Responsive image`.
+2. Change the format of the `Image` field to use `Responsive image`.
 
 3. Select `Acme Image` as the Responsive image style we want to use.
 
@@ -82,6 +82,7 @@ We now have a Responsive image style, with the breakpoints matched to an image s
 
 5. Clear caches, and then visit an article node with an image.
 
-If you have responsive testing tools in your browser, use those to manipulate the size of your "Screen". If not just make your window smaller until you can start to see the images changing size.
+If you have responsive testing tools in your browser, use those to emulate different screen sizes. If not just make your window smaller until you can start to see the images changing size.
 
 ## Done ☺
+Almost there! [Exercise 18 - Custom Theme Settings 1](exercise_18-theme-settings1.md)

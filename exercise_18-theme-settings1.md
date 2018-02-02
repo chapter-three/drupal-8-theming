@@ -4,8 +4,7 @@
 
 ## Creating a theme settings file
 
-Often we need to create small, simple little settings for our theme that can make it more reusable and customizable across sites. We can create new theme settings on our theme's settings page that we can use to help configure and customize our theme.
-For this we will utilize two additional files. **acme.settings.yml** and **theme-settings.php** file.
+Often we need to create small, simple little settings for our theme that can make it more reusable and customizable across sites. We can create new theme settings on our theme's settings page that we can use to help other users configure and customize our theme. For this, we will utilize two additional files. **acme.settings.yml** and **theme-settings.php** file.
 
 1. Go to MYDRUPAL.LOCAL/admin/appearance/settings/acme in your browser to see what settings are available by default.
 
@@ -65,3 +64,4 @@ For this we will utilize two additional files. **acme.settings.yml** and **theme
 
 
 ## Done ☺
+One more to go! [Exercise 19 - Custom Theme Settings 2](exercise_19-theme-settings2.md)

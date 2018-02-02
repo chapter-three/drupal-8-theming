@@ -4,7 +4,7 @@
 
 ## Simple form altering
 
-A big part of Drupal are the forms. For example, content entry forms to add and manage content, Search forms to find content, and settings form to control the numerious parts of our site. Default forms are pretty awesome, but sometimes they just aren't enough. Every now and then, we need to alter a label, default value, or add some libraries for styling or some cool javascript functionality.
+A big part of Drupal are the forms. For example, content entry forms to add and manage content, Search forms to find content, and settings form to control the numerous parts of our site. Default forms are pretty awesome, but sometimes they just aren't enough. Now and then, we need to alter a label, default value, or add some libraries for styling or some cool javascript functionality.
 
 Form API and Drupal form alters are still in Drupal 8 are are still incredibly powerful tools to control Drupal. When using a form_alter for theming, It is best to keep it to simple alterations. Simple alterations include changing labels, adding/removing classes, editing div structure, and adding HTML5 placeholders, like in our following examples. Anything else should really be done in a module form alter.
 
@@ -28,7 +28,7 @@ Form API and Drupal form alters are still in Drupal 8 are are still incredibly p
 
 ### Simple form altering with `hook_form_FORM_ID_alter` function 
 
-This function is refined to only effect the form with the matching **FORM_ID** in the function name.
+This function is refined to only affect the form with the matching **FORM_ID** in the function name.
 
 1. Replace the above function with the following code:
 	
@@ -44,7 +44,7 @@ Let's say we want to leverage one of the libraries from core or contrib when our
 
 1. Search and remove any other instances of kint() in your theme. Make sure the search_kint module is enabled.
 
-1. View your site as an annonymous user by opening a new browser or private window. Verify that `form.js` is not included.
+1. View your site as an anonymous user by opening a new browser or private window. Verify that `form.js` is not included.
 
 2. Add the following to the `acme_form_search_block_form_alter` function in **acme.theme**
 
@@ -65,14 +65,15 @@ Let's say we want to leverage one of the libraries from core or contrib when our
 
 10. Clear your caches.
 
-If everything worked, the form.js file will now be loaded for whenever the search block is present even for anonymous users.
+If everything worked, the form.js file will be loaded for whenever the search block is present even for anonymous users.
 	
 
 
 
 ## Questions you may have
-* What is the benefit of using **hook\_form\_FORM\_ID\_alter** rather then just **hook\_form\_alter**?
+* What is the benefit of using **hook\_form\_FORM\_ID\_alter** rather than just **hook\_form\_alter**?
 * What else can I do with form alters?
 * Can I use `[#attached]` in any function?
 
 ## Done ☺
+You're on fire! Don't stop now! [Exercise 17 - Responsive Images](exercise_17-responsive.md)

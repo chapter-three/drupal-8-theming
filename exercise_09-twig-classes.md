@@ -2,7 +2,7 @@
 
 # Exercise 9:
 
-Drupal has a number of handy functions specifically designed for the manipuation of html elements.
+Drupal has some handy functions specifically designed for the manipulation of HTML elements.
 
 
 ## Manipulating Classes with Twig
@@ -79,4 +79,4 @@ Let's create a special body class for the user role.
 
 
 ## Done ☺
-We're getting pretty good at this!. Let's see what [Excercise 10 - Twig Filters](exercise_10-twig-filters.md) has to offer...
+We're getting pretty good at this!. Let's see what [Exercise 10 - Twig Filters](exercise_10-twig-filters.md) has to offer...

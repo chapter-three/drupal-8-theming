@@ -4,13 +4,13 @@
 
 ## What is theming in Drupal and Drupal 8
 
-Theming in Drupal is taking the processed data from Drupal, and outputting it our desired html structure so that web browsers can display our content. Themes make Drupal websites beautiful, and can make the difference between a user friendly site or a difficult to use site. A good theme will show off all the best aspects of your website, while maintaining all the speed and flexibility that Drupal brings to the table.  
+Theming in Drupal is taking the processed data from Drupal, and outputting it our desired HTML structure so that web browsers can display our content. Themes make Drupal websites beautiful and can make the difference between a user-friendly site or a difficult to use site. A good theme will show off all the best aspects of your website while maintaining all the speed and flexibility that Drupal brings to the table.  
 
 By the end of this workshop, participants should be able to understand and use common theme components for Drupal 8 and understand the major changes between Drupal 7 and Drupal 8 theming.
 
 ## I. Enable theme debugging and other local settings.
 
-### If using ADD, delete site-specific folder.
+### If using ADD, delete the site-specific folder.
 Acquia Dev Desktop assumes a multi-site installation. For consistency across systems, we'll use the standard approach.
     
   1. Delete **MYDRUPAL/sites/MYDRUPAL.dd** folder
@@ -43,12 +43,12 @@ Acquia Dev Desktop assumes a multi-site installation. For consistency across sys
 3. After this step:
 	
 	* CSS and JS should not be cached.	
-	* Changes to twig, js and css files will be seen on page refresh.
+	* Changes to Twig, JS and CSS files will be seen on page refresh.
 	* Theme debugging information will be available in source comments. 
 
 ## II. User Composer to download [Devel](https://www.drupal.org/project/devel), [Search Kint](https://www.drupal.org/project/search_kint) and [Admin Toolbar](https://www.drupal.org/project/admin_toobar) modules.
  
-  _Composer is the only recommended way of installing modules for Drupal 8. While it is still possible to download modules as packages, users who do so will encounter conflicts and dependency issues. For information on installing a drupal 8 modules with composer, please see [Using Composer to manage Drupal site dependencies](https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#adding-modules)._
+  _Composer is the only recommended way of installing modules for Drupal 8. While it is still possible to download modules as packages, users who do so will encounter conflicts and dependency issues. For information on installing Drupal 8 modules with composer, please see [Using Composer to manage Drupal site dependencies](https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies#adding-modules)._
 
  
   0. Open terminal and navigate to your site root.
@@ -102,13 +102,13 @@ _In .twig files:_
 
 ## III. Clearing the Registry
 
-Throughout these exercises you'll be asked to clear cache or registry in order to see changes. 
+Throughout these exercises, you'll be asked to clear the cache or registry to see changes. 
  
 **Ways to clear registry (aka "Clear Cache"):**
 
-* use ``$ drush cr`` in the terminal*
+* Use ``$ drush cr`` in the terminal*
 * go to Configuration > Performance and Clear All Caches. 
-* with admin\_toolbar\_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
+* With admin\_toolbar\_tools enabled, hover over the Drupalicon and choose Flush all Caches. 
 
 *Note that if you use Acquia Dev Desktop, you may have to run your drush commands through the Terminal Link in its UI.
 
@@ -119,4 +119,4 @@ Throughout these exercises you'll be asked to clear cache or registry in order t
 + Why don't we use settings.php ?
 
 ## Done ☺
-On to [Excercise 2 - Add Content](exercise_02-add-content.md)!
+On to [Exercise 2 - Add Content](exercise_02-add-content.md)!

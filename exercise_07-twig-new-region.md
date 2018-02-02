@@ -2,9 +2,9 @@
 
 # Exercise 7: 
 
-## Adding a new region (lets use Twig)
+## Adding a new region (Let's use Twig)
 
-The client wants a new region for special messages at the top of the footer, so we’ll give them a new region called `Footer top`. Eventually, it would be great to style this region to look a little nicer, but for now lets just put the content in place.
+The client wants a new region for special messages at the top of the footer, so we’ll give them a new region called `Footer top`. Eventually, it would be great to style this region to look a little nicer, but for now, lets just put the content in place.
 
 1. Update **acme.info.yml** to include the new Footer top region:
 
@@ -15,7 +15,7 @@ The client wants a new region for special messages at the top of the footer, so 
 	  ...
 	```
 
-2. Now that Drupal knows that a new region is available, we need to actually print that region to the page by modifying **page.html.twig**.
+2. Now that Drupal knows that a new region is available, we need to print that region to the page by modifying **page.html.twig**.
 3. Navigate to the Classy theme in **MYDRUPAL/core/themes/classy/templates/layout** and locate **page.html.twig**.
 4. Make a copy of **page.html.twig** and put it in the **acme** theme folder. We like to keep it organized, so we'll put it in **MYDRUPAL/themes/custom/acme/templates/page**.
 
@@ -71,5 +71,5 @@ Look for and copy the following lines of code around line 81:
 
 
 ## Done ☺
-Sometimes you feel like a nut, sometimes you [Excercise 8 - Dot Syntax](exercise_08-twig-dot-syntax.md).
+Sometimes you feel like a nut; sometimes you [Exercise 8 - Dot Syntax](exercise_08-twig-dot-syntax.md).
 

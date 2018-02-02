@@ -2,15 +2,15 @@
 
 # Exercise 5: 
 
-## Drupal asset libraries: adding css and javascript to your site
+## Drupal asset libraries: adding CSS and javascript to your site
 
-In Drupal 8, "Asset Libraries" are used as the system for loading stylesheets (CSS) and JavaScript (JS). The libraries system that you use in your theme is the same framework used by modules and core. Asset libraries can contain one or more CSS assets, one or more JS assets, and one or more JS settings.
+In Drupal 8, "Asset Libraries" are used for loading stylesheets (CSS) and JavaScript (JS). The libraries system that you use in your theme is the same framework used by modules and core. Asset libraries can contain one or more CSS assets, one or more JS assets, and one or more JS settings.
 
 Drupal follows this high-level principle: CSS and javascript are only loaded if you tell Drupal it should load them. Drupal has stopped assuming that it should load all assets on all pages, because this is bad for front-end performance.
 
-The biggest difference from Drupal 7 is when it comes to Javascript loaded on pages. By default Drupal doesn't need JavaScript on most pages that anonymous users can see. This means that jQuery is not automatically loaded on all pages anymore. If your theme does need it, you can declare it in one of your theme's libraries and it will be added to every page.
+The biggest difference from Drupal 7 is when it comes to Javascript loaded on pages. By default Drupal doesn't need JavaScript on most pages that anonymous users can see. This means that jQuery is not automatically loaded on all pages anymore. If your theme does need it, you can declare it in one of your theme's libraries, and it will be added to every page.
 
-### The general process for adding css and javascript
+### The general process for adding CSS and javascript
 
 The basic process breaks down into 3 steps
 
@@ -21,7 +21,7 @@ The basic process breaks down into 3 steps
 
 ## Create a library
 	
-In the following steps we will create a libraries.yml file, declare our library some css files, and create the css files in out theme.
+In the following steps, we will create a libraries.yml file, declare our library some css files and create the css files in out theme.
 
 1. Navigate to your theme's root directory 
 
@@ -47,7 +47,7 @@ In the following steps we will create a libraries.yml file, declare our library 
 
    ```
    
-   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to use some word(s) to describe what the library will do. A name like `global-styles` would be more accurate for this library, but I'm a free spirit and I like to run with scissors.
+   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to use some word(s) to describe what the library will do. A name like `global-styles` would be more accurate for this library, but I'm a free spirit, and I like to run with scissors.
    
 4. Navigate back to your theme's root directory, and create a folder called **"css"** (if one doesn't already exist).
 
@@ -92,7 +92,7 @@ In the following steps we will create a libraries.yml file, declare our library 
    
 7. Navigate back to your theme root directory and open your **acme.info.yml** file
 
-8. We need to make our theme aware of our newly declared library before anything will happen.
+8. We need to make our theme aware of our newly declared library before anything happens.
 
 9. Add the following code to your **acme.info.yml** file
 
@@ -113,7 +113,7 @@ In the following steps we will create a libraries.yml file, declare our library 
 ```
 
 ## Attach Library to a template
-In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page we should use the `attach_library()` function in twig to add js or css.
+In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page, we should use the `attach_library()` function in twig to add js or CSS.
 
 1. Create a folder called **js** in your theme root and add a javascript file called **custom-widget.js**
 
@@ -123,7 +123,7 @@ $ touch themes/custom/acme/js/custom-widget.js
 
 ```
 
-2. Create a `css` file in the **css** folder called **custom-widget.css**.
+2. Create a CSS file in the **css** folder called **custom-widget.css**.
 
 ```bash
 $ touch themes/custom/acme/css/custom-widget.css
@@ -131,7 +131,7 @@ $ touch themes/custom/acme/css/custom-widget.css
 ```
 
 
-3. Add some sample css and js to each file: 
+3. Add some sample CSS and js to each file: 
     
     **custom-widget.js:**
     
@@ -183,16 +183,16 @@ $ drush cr
     ```
 6. Verify that **custom-widget.js** and **custom-widget.css** have loaded on the article pages but NOT on basic pages.     
 
-## Overriding and Removing libraries
+## Overriding and removing libraries
 
-### Removing css or javascript
+### Removing CSS or javascript
 
 
-If we are using a base theme, it is very possible that some css or js is coming over from the base theme that we just do not want to use in our theme. Or sometimes there is some css coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed", you may find yourself in a situation where a contrib module or other library is just adding to much. We can remove stylesheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml file
+If we are using a base theme, it is very possible that some CSS or javascript is coming over from the base theme that we just do not want to use in our theme. Or sometimes there stylesheets coming from core that we just don't want. Even though Drupal tries to follow the rule of only "load stuff only if needed," you may find yourself in a situation where a contrib module or other library is just adding too much. We can remove stylesheets from output at the theme level by using the `stylesheets-remove` key in our *.info.yml* file.
 
-**This method is for removing individual css or javascript files**
+**The following method is for removing individual CSS or javascript files**
 
-3. Take a look at the css that is being loaded on your site as a logged in user. Note that **/core/assets/vendor/jquery.ui/themes/base/dialog.css** and 
+3. Take a look at the CSS that is being loaded on your site as a logged in user. Note that **/core/assets/vendor/jquery.ui/themes/base/dialog.css** and 
   **/core/themes/classy/css/components/breadcrumb.css** are being loaded.
 
 1. Navigate to your theme root and open the **acme.info.yml** file.
@@ -204,10 +204,10 @@ If we are using a base theme, it is very possible that some css or js is coming 
 	  - core/misc/active-links.css
 	  - '@classy/css/components/breadcrumb.css'
 	```
-	In this example we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
+	In this example, we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
 
 
-### Overriding css or javascript
+### Overriding CSS or javascript
 
 Sometimes we don't want to remove a file or a library, but we do have a better file for it to use. We can override whole libraries or components of them. Below is an example of libraries-override from drupal.org. You would place this in your *.info.yml file. 
 
@@ -257,5 +257,5 @@ libraries-extend:
 
 
 ## Done ☺
-Doing great! Proceed to [Excercise 6 - Intro to Twig](exercise_06-intro-to-twig.md)
+You're doing great! Proceed to [Ecercise 6 - Intro to Twig](exercise_06-intro-to-twig.md)
 

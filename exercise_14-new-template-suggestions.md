@@ -4,9 +4,9 @@
 
 ## Create new template suggestions
 
-In Drupal 7, we used to create new template suggestions in our preprocess functions. In Drupal 8, we use two new functions to create new suggestions for a twig templates.
+In Drupal 7, we used to create new template suggestions in our preprocess functions. In Drupal 8, we use two new functions to create new suggestions for Twig templates.
 
-These functions are `hook_theme_suggestions_alter()` function and the more targeted, `hook_theme_suggestions_HOOK_alter()` function. The `HOOK` refers to the theme hook being used, like 'node' or 'page' or 'menu_link'. This `HOOK` helps to focus in your suggestions to a specific theme component. In this exercise we will create new suggestions for our 'node' templates based off if the user is logged in or not.
+These functions are `hook_theme_suggestions_alter()` function and the more targeted, `hook_theme_suggestions_HOOK_alter()` function. The `HOOK` refers to the theme hook being used, like `node` or `page` or `menu_link`. This `HOOK` helps to focus in your suggestions to a specific theme component. In this exercise, we will create new suggestions for our 'node' templates based off if the user is logged in or not.
 
 1. Open the **acme.theme** file and add the following function:
 
@@ -41,3 +41,4 @@ These functions are `hook_theme_suggestions_alter()` function and the more targe
 
 
 ## Done ☺
+Yes, there's more. [Exercise 15 - Add Classes with PHP](exercise_15-preprocess-add-classses.md)

@@ -37,9 +37,9 @@ You can use an svg on your machine or the example below.
 	
 	
 ## Questions you may have...
-+ What other types of files can be included?
++ Can other types of files can be included?
 + Where does the function `active_theme_path()` come from?
 
 
 ## Done ☺
-Onward! [Excercise 13 - Preprocess Function](exercise_13-preprocess.md)
+Onward! [Exercise 13 - Preprocess Functions](exercise_13-preprocess.md)
