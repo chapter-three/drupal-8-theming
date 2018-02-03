@@ -114,4 +114,4 @@ $settings['rebuild_access'] = TRUE;
  */
 $settings['skip_permissions_hardening'] = TRUE;
 
-$settings['hash_salt'] = 'insecure'
+$settings['hash_salt'] = 'insecure';
