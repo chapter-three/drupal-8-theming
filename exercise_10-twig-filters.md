@@ -15,7 +15,7 @@
 1. Near your other variable declaration in your theme's **node.html.twig** add:
 
     ```twig
-    {%  set title_string = node.title %}
+    {%  set title_string = node.label %}
     ```
  
 
@@ -32,7 +32,7 @@
 3. If you have time, try creating arrays, loops and object to test some of the other amazing filters for twig See: https://twig.symfony.com/doc/2.x/filters/index.html.
 
 ## Questions you may have...
-+ Why didn't you use `node.label` or `node.title`?
++ When should one use Twig filters instead of CSS or PHP?
 
 ## Done ☺
 ¡No Pare! !Sigue! !Sigue! [Exercise 11 - Twig Blocks](exercise_11-twig-block.md)
