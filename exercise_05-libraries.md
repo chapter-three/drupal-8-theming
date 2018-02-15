@@ -102,7 +102,7 @@ In the following steps, we will create a libraries.yml file, declare our library
 	```
 10. Clear your caches and you should now see your css styles in place.
 
-    If everything worked, you should see output like the following in the head section on all pages of your theme.
+    If everything worked, you should see output like the following in the head section in the source code on all pages of your theme.
 
 ```html
 @import url("/themes/acme/css/css-stuff.css?of7sd1");
@@ -254,6 +254,7 @@ libraries-extend:
 ## Questions you may have...
 + Why is the word `theme` in the library definition?
 + Is `//fonts.googleapis.com/...` a comment?
++ Why do some lines start with `-` in .yml files and others don't?
 
 
 ## Done ☺
