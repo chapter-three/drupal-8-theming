@@ -22,7 +22,7 @@ Find **toolbar.breakpoints.yml** for and observe how the breakpoints correspond 
     
     ```bash 
     $ cd MYDRUPAL
-    $ touch themes/acme/acme.breakpoints.yml
+    $ touch themes/custom/acme/acme.breakpoints.yml
     ```
 3. Open the file in your preferred code editor and add the following.
 
@@ -35,13 +35,13 @@ Find **toolbar.breakpoints.yml** for and observe how the breakpoints correspond 
         - 1x
 	acme.tablet:
   	  label: tablet
-  	  mediaQuery: '(min-width: 601px)'
+  	  mediaQuery: '(min-width: 1040px)'
   	  weight: 1
   	  multipliers:
         - 1x
 	acme.desktop:
   	  label: desktop
-  	  mediaQuery: '(min-width: 961px)'
+  	  mediaQuery: '(min-width: 1200px)'
   	  weight: 2
   	  multipliers:
        - 1x
