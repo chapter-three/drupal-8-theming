@@ -12,7 +12,7 @@ As long as you have your .info.yml file in place with a few keys in place, you h
 1. Locate the **MYDRUPAL/themes** folder in your Drupal installation. In Drupal 8, Contrib and Custom modules and themes, are saved at the root level **MYDRUPAL/modules** and **MYDRUPAL/themes** folders.
 
 
-2. Create a new folder and call it `acme`
+2. Create a new folder called `custom` and inside it a folder called  `acme`
 
     ```bash
     $ cd MYDRUPAL
