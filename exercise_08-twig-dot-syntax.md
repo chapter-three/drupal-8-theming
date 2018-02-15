@@ -21,6 +21,8 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 
 1. Delete the kint statement.
 
+1. Verify that the article you're looking at has Tags. 
+
 1. In **node.html.twig**, change ```{{ content }}``` to ```{{ content|without('field_tags') }}```
 
 2. View an article node page. Now all fields are printed except for the tags field.
