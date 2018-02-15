@@ -6,7 +6,7 @@
 
 It’s hard to theme the content of a site when there is no content. So, before we dive into the good stuff, let's start creating some content.
 
-**If you're comfortable creating content in Drupal, just devel generate some nodes.**
+**If you're comfortable creating content in Drupal, just devel generate some taxonomy then some nodes.**
 
 
 1. In the admin menu, click `Content` > `Add content` > `Basic page`. 
