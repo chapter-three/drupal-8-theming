@@ -27,9 +27,11 @@ Over the course of the day, we will work through exercises together so that by t
 
 * All terminal commands are run from the Drupal root. 
 
-* `$` indicates a prompt. You do not need to type it into the terminal window 
+* `$` indicates a prompt. You do not need to type it into the terminal window.
 
-* `MYDRUPAL` refers to the Drupal root directory or base URL
+* `MYDRUPAL` refers to the Drupal root directory or base URL.
+
+* You'll have an easier time if you configure your editor to use spaces instead of tabs. 
 
 * Feel free to ask any of the "Questions you may have ..." someone probably asked the question before!
 
