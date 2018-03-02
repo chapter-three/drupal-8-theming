@@ -84,6 +84,11 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 /**
+ * Disable Page Cache.
+ */
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+
+/**
  * Allow test modules and themes to be installed.
  *
  * Drupal ignores test modules and themes by default for performance reasons.
