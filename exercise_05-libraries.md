@@ -43,7 +43,7 @@ In the following steps, we will create a libraries.yml file, declare our library
         theme:
           css/css-stuff.css: {}
           css/css-stuff-print.css: { media: print }
-          #fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans: { type: external }
+          //fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans: { type: external }
 
    ```
    
