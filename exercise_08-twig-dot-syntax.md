@@ -31,10 +31,10 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 
 1. Find ```{{ content | without('field_tags') }} ``` from the previous step and change it to ```{{ content | without ('field_tags', 'field_image') }}```
 
-    This removes the tags and the body fields.
+    This removes the tags and the image fields.
 
 
-2. Add the following directly above `{{ content | without ('field_tags', 'body') }}`.
+2. Add the following directly above `{{ content | without ('field_tags', 'image') }}`.
 
     ```twig
     <div class="sidebar">

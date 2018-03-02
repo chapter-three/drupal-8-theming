@@ -4,9 +4,9 @@
 
 ## Simple form altering
 
-A big part of Drupal are the forms. For example, content entry forms to add and manage content, Search forms to find content, and settings form to control the numerous parts of our site. Default forms are pretty awesome, but sometimes they just aren't enough. Now and then, we need to alter a label, default value, or add some libraries for styling or some cool javascript functionality.
+A big part of Drupal are forms. For example, content entry forms to add and manage content, search forms to find content, and settings forms to control the numerous parts of our site. Default forms are pretty awesome, but sometimes they just aren't enough. Now and then we need to alter a label, default value, or add libraries for styling or cool javascript functionality.
 
-Form API and Drupal form alters are still in Drupal 8 are are still incredibly powerful tools to control Drupal. When using a form_alter for theming, It is best to keep it to simple alterations. Simple alterations include changing labels, adding/removing classes, editing div structure, and adding HTML5 placeholders, like in our following examples. Anything else should really be done in a module form alter.
+Form API and Drupal form alters are still in Drupal 8 and are still incredibly powerful tools to control Drupal. When using a form_alter for theming it is best to keep it to simple alterations such as changing labels, adding/removing classes, editing div structure, and adding HTML5 placeholders like in our following examples. Anything else should really be done in a module form alter.
 
 **For this exercise, make sure the search block is in a region and visible.**
 

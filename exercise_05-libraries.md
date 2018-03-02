@@ -43,11 +43,11 @@ In the following steps, we will create a libraries.yml file, declare our library
         theme:
           css/css-stuff.css: {}
           css/css-stuff-print.css: { media: print }
-          //fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans: { type: external }
+          #fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans: { type: external }
 
    ```
    
-   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to use some word(s) to describe what the library will do. A name like `global-styles` would be more accurate for this library, but I'm a free spirit, and I like to run with scissors.
+   We just declared our library called `css-stuff`. We can give it any name we want as long as another module or theme hasn't declared it. A best practice for theme libraries is to use some word(s) to describe what the library will do. A name like `global-styles` would be more accurate for this library, but I'm a free spirit and I like to run with scissors.
    
 4. Navigate back to your theme's root directory, and create a folder called **"css"** (if one doesn't already exist).
 
@@ -136,7 +136,7 @@ $ touch themes/custom/acme/css/custom-widget.css
     **custom-widget.js:**
     
     ```js
-    console.log('It Works')
+    console.log('It Works');
     ```
     
     **custom-widget.css:**
@@ -200,9 +200,9 @@ If we are using a base theme, it is very possible that some CSS or javascript is
 4. Place the following code in your **acme.info.yml** file.
 
 	```
-	stylesheets-remove:
-	  - core/misc/active-links.css
-	  - '@classy/css/components/breadcrumb.css'
+    	stylesheets-remove:
+    	  - core/misc/active-links.css
+    	  - '@classy/css/components/breadcrumb.css'
 	```
 	In this example, we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
 
@@ -213,7 +213,7 @@ Sometimes we don't want to remove a file or a library, but we do have a better f
 
 Note: The methods for modifying libraries have changed during the development of Drupal 8. Check [Drupal.org's Theming Guide](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend) for the latest documentation.
 
-**This code is just for show. YAML files cannot have comments.**
+**This code is just for show. YAML files cannot have comments. (I do not believe this is accurate, tested # for commenting seems to work fine)  **
 
 ```
 libraries-override:
@@ -258,5 +258,5 @@ libraries-extend:
 
 
 ## Done ☺
-You're doing great! Proceed to [Ecercise 6 - Intro to Twig](exercise_06-intro-to-twig.md)
+You're doing great! Proceed to [Exercise 6 - Intro to Twig](exercise_06-intro-to-twig.md)
 

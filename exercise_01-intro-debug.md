@@ -4,7 +4,7 @@
 
 ## What is theming in Drupal and Drupal 8
 
-Theming in Drupal is taking the processed data from Drupal, and outputting it our desired HTML structure so that web browsers can display our content. Themes make Drupal websites beautiful and can make the difference between a user-friendly site or a difficult to use site. A good theme will show off all the best aspects of your website while maintaining all the speed and flexibility that Drupal brings to the table.  
+Theming in Drupal is taking the processed data from Drupal, and outputting our desired HTML structure so that web browsers can display our content. Themes make Drupal websites beautiful and can make the difference between a user friendly site or a difficult to use site. A good theme will show off all the best aspects of your website while maintaining all the speed and flexibility that Drupal brings to the table.
 
 By the end of this workshop, participants should be able to understand and use common theme components for Drupal 8 and understand the major changes between Drupal 7 and Drupal 8 theming.
 
@@ -72,7 +72,7 @@ Acquia Dev Desktop assumes a multi-site installation. For consistency across sys
   2. Download Search Kint and its dependencies.
   
       ```bash
-      $ composer require drupal/search_kint 
+      $ composer require drupal/search_kint
       ```
 
   1. Enable the modules using drush or through the UI and clear registry.

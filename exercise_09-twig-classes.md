@@ -7,7 +7,7 @@ Drupal has some handy functions specifically designed for the manipulation of HT
 
 ## Manipulating Classes with Twig
 
-### Inpspect the `attributes` array.
+### Inspect the `attributes` array.
 1. Add `{{ kint(attributes) }}` in your theme's **node.html.twig**. Review the object and its properties and methods. Note that `addClass()` is an available public method.
 
 ### Add a class.

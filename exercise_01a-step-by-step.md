@@ -1,5 +1,5 @@
 ### Allow local settings and services.
-3. Open up the `settings.php` file in your preferred code editor and uncomment the following lines (~ lines 752-755 in Drupal 8.2.6):
+3. Open up the `default.settings.php` in your sites/default folder and save it as `settings.php`. In your preferred code editor uncomment the following lines (~ lines 783-785 in Drupal 8.4.5):
 
 	```php
            # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
@@ -45,7 +45,7 @@
 	```
 	Remember spaces are significant in .yml files
  
-2. Uncomment the following lines in **settings.local.php** (line 67) and (line 76)
+2. Uncomment the following lines in **settings.local.php** (line 67) and (line 84)
 	
 	```php
 	$settings['cache']['bins']['render'] = 'cache.backend.null';
@@ -64,7 +64,7 @@
 	    
 	```
 	
-3. Did it work?
+3. Did it work?  Once your site is available check that:
 	
 	* CSS and JS should not be cached.	
 	* Changes to twig, js and css files should be seen on page refresh.
