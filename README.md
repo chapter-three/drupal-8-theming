@@ -6,7 +6,8 @@ Are you struggling with Drupal 8 theming? New to Drupal or Drupal 8?
 
 Let's take it from the top!
 
-This hands-on training will take you step-by-step through the process of creating a custom theme in Drupal 8.
+This hands-on training will take you step-by-step through the process of creating a custom theme in Drupal 8. There will also be time for Drupal Q&A.
+
 
 Along the way, we'll cover:
 
@@ -21,7 +22,6 @@ Along the way, we'll cover:
 - Leveraging new Drupal 8 site building paradigms to make theming easier
 - Where to find help
 
-Over the course of the day, we will work through exercises together so that by the end of the day you’ll have a skeleton of your own working Drupal 8 theme. There will also be time for Drupal Q&A
 
 ## Notes:
 
@@ -50,7 +50,7 @@ Over the course of the day, we will work through exercises together so that by t
 
 ## Exercises
  
-[Exercise 1 - Local Setup](exercise_01-intro-debug.md)
+[Exercise 1 - Local Setup](https://docs.google.com/document/d/1ilmBEeIJb_c3YQLroryZZBu3neMY4UdN_8AZCLTnvTw/edit#heading=h.s8eqm5cz2t56)
 
 [Exercise 2 - Add Content](exercise_02-add-content.md)
 
