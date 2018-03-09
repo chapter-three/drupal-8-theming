@@ -11,21 +11,6 @@ Twig "blocks" are used for inheritance and act as placeholders and replacements 
 
 [Twig block official documentation](http://twig.sensiolabs.org/doc/tags/extends.html)
 http://twig.sensiolabs.org/doc/tags/extends.html
-
-	
-### Twig block structure
-
-In the following example, we have two Twig blocks one named `content` and the other named `other_content`.
-
-```twig
-{% block content %}
-  {{ variable_to_print }}
-{% endblock %}
-
-{% block other_content %}
-  {{ variable_to_print }}
-{% endblock %}
-```
 	
 ### Using twig block inheritence
 

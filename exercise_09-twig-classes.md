@@ -46,9 +46,9 @@ Let's create a special body class for the user role.
 
 1. Note that `logged_in` is one of the variables available in **html.html.twig** according to its comments. 
 
-2. Use `{{ kint(user) }}` to inspect the user variable in **html.html.twig**.  Search the kint for `account`. Note that the method `getAccount()` is public. If we look back at Exercise 8, we see that we can use {{ user.account}} because of that sweet, sweet Twig magic.
+2. Use `{{ kint(user) }}` to inspect the user variable in **html.html.twig**.  Search the kint for `account`. Note that the method `getAccount()` is public. If we look back at Exercise 8, we see that we can use `{{ user.account }}` because of that sweet, sweet Twig magic.
 
-4. Use `{{ kint(user.account}}`. Search for `roles`. Look at that! Our friends at D.O. also made `getAccount()` public. Now we can do the thing. 
+4. Use `{{ kint(user.account }}`. Search for `roles`. Look at that! Our friends at D.O. also made `getAccount()` public. Now we can do the thing. 
 
 2. Below ```{% set myclasses = ['red', 'green', 'blue'] %}``` add 
 

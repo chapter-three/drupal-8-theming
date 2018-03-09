@@ -6,14 +6,14 @@
 
 It’s hard to theme the content of a site when there is no content. So, before we dive into the good stuff, let's start creating some content.
 
-**If you're comfortable creating content in Drupal, just devel generate some taxonomy then some nodes.**
+**If you're comfortable creating content in Drupal, skip to "Auto Generate Content".**
 
 
 1. In the admin menu, click `Content` > `Add content` > `Basic page`. 
     1. Title: `About`
     2. Body: `This is the awesome site that I'm making with Chapter Three.` (Or filler text from wherever you want.)
     3. Under **Menu Settings** check the box to **Provide a menu link** and leave all defaults.
-    4. Click the **Save and publish** button.
+    4. Click the **Save** button.
 2. Click `Content` > `Add content` > `Article`. 
     1. Title: `An Interesting Article`
     2. Body: `We’re preparing to launch a new Drupal website full of interesting articles like this one.`  (Or filler text from wherever you want.)
@@ -46,7 +46,7 @@ The above process is fine for one or two items, but what if you need to test out
 1. Click "Configuration" in the Admin menu.
 2. In the `Development` group select `Generate content`.
 	1. Select "Content Type: `Article`
-	2. How many nodes would you like to generate?: `100`
+	2. How many nodes would you like to generate?: `25`
 	3. How far back in time should the nodes be dated?: `1 year`
 	4. (If comments enabled) Maximum number of comments per node: `5`
 	4. Maximum number of words in titles: `10` 

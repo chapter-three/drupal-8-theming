@@ -4,7 +4,7 @@
 
 ## Intro to Twig 
 
-Twig is a modern, advanced, templating language for PHP. Twig is also the new templating engine for Drupal 8. It replaces the old and antiquated phptemplate engine. Twig is fast, secure, and incredibly flexible, but one of its best attributes is that it does not allow some of the bad habits in Drupal theming that phptemplate allowed in the past. (I'm referring to stuff like database queries and data preprocessing in the template files). We've all done it at some point, and yes, we are all ashamed.
+Twig is a modern, advanced, templating language for PHP. Twig is also the new templating engine for Drupal 8. It replaces the old and antiquated phptemplate engine. Twig is fast, secure, and incredibly flexible, but one of its best attributes is that it does not allow some of the bad habits in Drupal theming that phptemplate allowed in the past. (I'm referring to stuff like database queries and data preprocessing in the template files. We've all done it at some point, and yes, we are all ashamed.)
 
 **If debugging is not enabled, please see "Exercise 1"**
 
@@ -15,7 +15,7 @@ There are 3 Basic Syntaxes of Twig. Mostly, we will use just 2 of them.
 ###The “Say Something” Syntax: {{ ... }}
 The double-curly-brace (`{{`) is always used to **print** something. If whatever you need to do will result in something being printed to the screen, then you’ll use this syntax. I call this the “say something” tag, because it’s how you “speak” in Twig.
 
-+ Print a variable
++ Printing a variable
 
   ```twig
   {{ content }}
@@ -24,7 +24,7 @@ The double-curly-brace (`{{`) is always used to **print** something. If whatever
 ###The “Do Something” Syntax: {% ... %}
 The curly-percent (`{%`) is the other syntax, which I call the “do something” syntax. It’s used for things like **if** and **for** tags as well as other things that “do” something. There are only a handful of things that can be used inside of it. If you go to Twig’s website, click Documentation, and scroll down, you can see a full list of everything in Twig. The “tags” header shows you everything that can be used inside of a “do something” tag, with more details about how each of these works. The only ones you need to worry about now are **if** and **for**. We’ll talk about a bunch more of these later.
 
-+ Run a function (in this case, check if the variable 'logo' is set, if so print the logo)
++ Running a function (in this case, check if the variable 'logo' is set, if so print the logo)
 
   ```twig
   {% if logo %}
@@ -32,7 +32,7 @@ The curly-percent (`{%`) is the other syntax, which I call the “do something�
   {% endif %}
   ```
 
-+ Run a loop and print a value (in this case, for each product item in products array, print out the product item content)
++ Runing a loop and print a value (in this case, for each product item in products array, it'll print out the product item content)
 
   ```twig
   {% for product in products %}

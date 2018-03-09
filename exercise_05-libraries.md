@@ -2,15 +2,15 @@
 
 # Exercise 5: 
 
-## Drupal asset libraries: adding CSS and javascript to your site
+## Drupal asset libraries: adding CSS and JavaScript to your site
 
 In Drupal 8, "Asset Libraries" are used for loading stylesheets (CSS) and JavaScript (JS). The libraries system that you use in your theme is the same framework used by modules and core. Asset libraries can contain one or more CSS assets, one or more JS assets, and one or more JS settings.
 
-Drupal follows this high-level principle: CSS and javascript are only loaded if you tell Drupal it should load them. Drupal has stopped assuming that it should load all assets on all pages, because this is bad for front-end performance.
+Drupal follows this high-level principle: CSS and JavaScript are only loaded if you tell Drupal it should load them. Drupal has stopped assuming that it should load all assets on all pages, because this is bad for front-end performance.
 
-The biggest difference from Drupal 7 is when it comes to Javascript loaded on pages. By default Drupal doesn't need JavaScript on most pages that anonymous users can see. This means that jQuery is not automatically loaded on all pages anymore. If your theme does need it, you can declare it in one of your theme's libraries, and it will be added to every page.
+The biggest difference from Drupal 7 is when it comes to JavaScript loaded on pages. By default Drupal doesn't need JavaScript on most pages that anonymous users can see. This means that jQuery is not automatically loaded on all pages anymore. If your theme does need it, you can declare it in one of your theme's libraries, and it will be added to every page.
 
-### The general process for adding CSS and javascript
+### The general process for adding CSS and JavaScript
 
 The basic process breaks down into 3 steps
 
@@ -21,7 +21,7 @@ The basic process breaks down into 3 steps
 
 ## Create a library
 	
-In the following steps, we will create a libraries.yml file, declare our library some css files and create the css files in out theme.
+In the following steps, we will create a libraries.yml file, declare our library some CSS files and create the CSS files in out theme.
 
 1. Navigate to your theme's root directory 
 
@@ -78,6 +78,12 @@ In the following steps, we will create a libraries.yml file, declare our library
       font-family: 'Abhaya Libre', serif;
       padding: 3px;
       text-decoration: none;
+    }
+    
+    h4 {
+      background-color: #3baf8a;
+      font-size: 1.5em;
+      padding: 3px;
     }    
 	```
 	and for **css-stuff-print.css**, you could add: 
@@ -113,9 +119,9 @@ In the following steps, we will create a libraries.yml file, declare our library
 ```
 
 ## Attach Library to a template
-In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page, we should use the `attach_library()` function in twig to add js or CSS.
+In Drupal 8, it is recommended that libraries only be applied when needed. Unless a style is being used on every page, we should use the `attach_library()` function in twig to add JS or CSS.
 
-1. Create a folder called **js** in your theme root and add a javascript file called **custom-widget.js**
+1. Create a folder called **js** in your theme root and add a JavaScript file called **custom-widget.js**
 
 ```bash
 $ mkdir themes/custom/acme/js
@@ -200,11 +206,12 @@ If we are using a base theme, it is very possible that some CSS or javascript is
 4. Place the following code in your **acme.info.yml** file.
 
 	```
-    	stylesheets-remove:
-    	  - core/misc/active-links.css
-    	  - '@classy/css/components/breadcrumb.css'
+   stylesheets-remove:
+      - core/misc/active-links.css
+      - '@classy/css/components/breadcrumb.css'
 	```
-	In this example, we are removing the extra css file that core tries to add with one of its jquery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
+	
+	In this example, we are removing the extra CSS file that core tries to add with one of its JQuery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
 
 
 ### Overriding CSS or javascript
@@ -213,43 +220,43 @@ Sometimes we don't want to remove a file or a library, but we do have a better f
 
 Note: The methods for modifying libraries have changed during the development of Drupal 8. Check [Drupal.org's Theming Guide](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend) for the latest documentation.
 
-**This code is just for show. YAML files cannot have comments. (I do not believe this is accurate, tested # for commenting seems to work fine)  **
+> **This code is just for show.**
 
-```
-libraries-override:
-  # Replace an entire library.
-  core/drupal.collapse: mytheme/collapse
+>```
+>libraries-override:
+>  # Replace an entire library.
+>  core/drupal.collapse: mytheme/collapse
   
-  # Replace an asset with another.
-  subtheme/library:
-    css:
-      theme:
-        css/layout.css: css/my-layout.css
+>  # Replace an asset with another.
+>  subtheme/library:
+>    css:
+>      theme:
+>        css/layout.css: css/my-layout.css
 
-  # Replace a core module JavaScript asset.
-  toolbar/toolbar:
-    js:
-      js/views/BodyVisualView.js: js/views/BodyVisualView.js
+>  # Replace a core module JavaScript asset.
+>  toolbar/toolbar:
+>    js:
+>      js/views/BodyVisualView.js: js/views/BodyVisualView.js
 
-  # Remove an asset.
-  drupal/dialog:
-    css:
-      theme:
-        dialog.theme.css: false
+>  # Remove an asset.
+>  drupal/dialog:
+>    css:
+>      theme:
+>        dialog.theme.css: false
   
-  # Remove an entire library.
-  core/modernizr: false  			
-```
+>  # Remove an entire library.
+>  core/modernizr: false  			
+>```
 
-**Libraries Extend Example**
+> **Libraries Extend Example**
   		
-```
-# Extend drupal.user: add assets from classy's user libraries.
-libraries-extend:
-  core/drupal.user: 
-    - classy/user1
-    - classy/user2
-```
+> ```
+> # Extend drupal.user: add assets from classy's user libraries.
+> libraries-extend:
+>  core/drupal.user: 
+>    - classy/user1
+>    - classy/user2
+>```
 
 ## Questions you may have...
 + Why is the word `theme` in the library definition?

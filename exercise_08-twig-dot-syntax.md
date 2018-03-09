@@ -34,7 +34,7 @@ Look at the comments at the top of the **node.html.twig** template. The comments
     This removes the tags and the image fields.
 
 
-2. Add the following directly above `{{ content | without ('field_tags', 'image') }}`.
+2. Add the following directly above `{{ content | without ('field_tags', 'field_image') }}`.
 
     ```twig
     <div class="sidebar">
@@ -58,30 +58,32 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 ### Explore.
 The `.` syntax in twig is a shorthand for some PHP methods and functions. Below is  a list of methods Twig will check in the order they will be checked in.
 
+> ```twig
+{{ sandwich.cheese }}   
+```
+       
+>```php
+// Array key.
+$sandwich['cheese'];
+// Object property.
+$sandwich->cheese;
+// Also works for magic get (provided you implement magic isset).
+$sandwich->__isset('cheese'); && $sandwich->__get('cheese');
+// Object method.
+$sandwich->cheese();
+// Object get method convention.
+$sandwich->getCheese();
+// Object is method convention.
+$sandwich->isCheese();
+// Method doesn't exist/dynamic method.
+$sandwich->__call('cheese');
+```
+
+
 1. Spend a few moments trying to print out variables and their children.
 
 
-    ```twig
-    {{ sandwich.cheese }}
-    ```
-    
-    ```php
-    // Array key.
-    $sandwich['cheese'];
-    // Object property.
-    $sandwich->cheese;
-    // Also works for magic get (provided you implement magic isset).
-    $sandwich->__isset('cheese'); && $sandwich->__get('cheese');
-    // Object method.
-    $sandwich->cheese();
-    // Object get method convention.
-    $sandwich->getCheese();
-    // Object is method convention.
-    $sandwich->isCheese();
-    // Method doesn't exist/dynamic method.
-    $sandwich->__call('cheese');
-    ```
-
+   
 ## Questions you may have...
 + What if I only want the body text without the surrounding markup?
 + Why do you keep telling me to delete my kint statements?

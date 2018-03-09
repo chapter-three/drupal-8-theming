@@ -33,6 +33,7 @@
 
 ## Questions you may have...
 + When should one use Twig filters instead of CSS or PHP?
++ Why didn't you use node.title instead of node.label?
 
 ## Done ☺
 ¡No Pare! !Sigue! !Sigue! [Exercise 11 - Twig Blocks](exercise_11-twig-block.md)
