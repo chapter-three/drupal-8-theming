@@ -84,7 +84,16 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 /**
- * Disable Page Cache.
+ * Disable Internal Page Cache.
+ *
+ * Note: you should test with Internal Page Cache enabled, to ensure the correct
+ * cacheability metadata is present. However, in the early stages of
+ * development, you may want to disable it.
+ *
+ * This setting disables the page cache by using the Null cache back-end
+ * defined by the development.services.yml file above.
+ *
+ * Only use this setting once the site has been installed.
  */
 $settings['cache']['bins']['page'] = 'cache.backend.null';
 
