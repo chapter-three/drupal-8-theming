@@ -40,7 +40,7 @@ Along the way, we'll cover:
 * Common hiccups are:
   * Syntax errors
   * Too many or not enough spaces in .yml files
-  • Cache not cleared
+  * Cache not cleared
   * PHP memory limit not high enough (>= 256) 
     * settings.php
        - `ini_set('memory_limit', '512M');`
@@ -105,6 +105,59 @@ Along the way, we'll cover:
 
 ###### Url
 *http://MYDRUPAL/admin/config*
+
+## Basic terminal commands used.
+
+Change Directory. 
+
+```cd ```  
+
+Create File.
+
+```touch```
+
+Create Folder.
+
+```mkdir```
+
+Move file from one location to another.
+
+```mv```
+
+Copy file to a new location.
+
+```cp```
+
+
+## Final Folder Structure
+
+```
+MYDRUPAL/themes/custom
+                    └── acme
+                        ├── acme.breakpoints.yml
+                        ├── acme.info.yml
+                        ├── acme.libraries.yml
+                        ├── acme.settings.yml
+                        ├── acme.theme
+                        ├── css
+                        │   ├── css-stuff-print.css
+                        │   ├── css-stuff.css
+                        │   └── custom-widget.css
+                        ├── images
+                        │   └── mysvg.svg
+                        ├── js
+                        │   └── custom-widget.js
+                        ├── templates
+                        │   ├── block
+                        │   │   └── block--system-powered-by-block.html.twig
+                        │   ├── html
+                        │   │   └── html.html.twig
+                        │   ├── node
+                        │   │   └── node.html.twig
+                        │   └── page
+                        │       └── page.html.twig
+                        └── theme-settings.php
+```
 
 
 ## Done ☺
