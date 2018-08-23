@@ -33,25 +33,30 @@ Often we need to create small, simple little settings for our theme that can mak
 6. Add the following code to that file.
 	
 	```php
-	<?php
-	
-	function acme_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
-
-		$form['copyright_holder'] = array(
-       		'#type' => 'textfield',
-       		'#title' => t('Copyright Holder'),
-       		'#default_value' => theme_get_setting('copyright_holder'),
-       		'#description' => t('This appears in the footer'),
-       		'#weight' => -10,
-   		);
-   		$form['search_placeholder'] = array(
-       		'#type' => 'textfield',
-       		'#title' => t('Search Placeholder'),
-       		'#default_value' => theme_get_setting('search_placeholder'),
-       		'#description' => t('This appears in the footer'),
-       		'#weight' => -10,
-   		);
-	}
+  <?php
+  
+  function acme_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
+  
+    $form['copyright_holder'] = [
+      '#type' => 'textfield',
+      '#title' => t('Copyright Holder'),
+      '#default_value' => theme_get_setting('copyright_holder'),
+      '#description' => t('This appears in the footer.'),
+      '#weight' => -10,
+    ];
+    $form['color'] = [
+      '#type' => 'select',
+      '#title' => t('Color'),
+      '#options' => [
+        'blue' => t('Blue'),
+        'green' => t('Green'),
+        'yellow' => t('Yellow')
+      ],
+      '#default_value' => theme_get_setting('color'),
+      '#description' => t('Choose a color'),
+      '#weight' => -10,
+    ];
+  }
 	```
       
 7. Clear cache, then go to our **Appearance** page. Click on **Settings** for your custom theme. You should see two new options for the settings we added. 

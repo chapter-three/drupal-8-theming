@@ -35,6 +35,8 @@ Along the way, we'll cover:
 
 * Feel free to ask any of the "Questions you may have ..." someone probably asked the question before!
 
+* If you're using Lando, `composer` becomes `lando composer`, `drush` becomes `lando drush`.  
+
 * See a mistake or typo? Submit a pull request on Github! 
 
 * Common hiccups are:

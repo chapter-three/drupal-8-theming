@@ -36,54 +36,51 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 
 2. Add the following directly above `{{ content | without ('field_tags', 'field_image') }}`.
 
-    ```twig
+  ```twig
     <div class="sidebar">
-      {{ content.field_tags }}
       {{ content.field_image }}
+      {{ content.field_tags }}
     </div>
-    ```
+  ```
 
-    You should now see your Tags and Image fields inside a div with class `sidebar`. 
+  You should now see your Tags and Image fields inside a div with class `sidebar`. 
     
 3. Add a little styling to **css-stuff.css** to get the full effect.
 
-    ```css
-    .node__content {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-    }
-    ```
+  ```css
+  .node__content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  ```
 
 
 ### Explore.
 The `.` syntax in twig is a shorthand for some PHP methods and functions. Below is  a list of methods Twig will check in the order they will be checked in.
 
-> ```twig
-{{ sandwich.cheese }}   
-```
-       
->```php
-// Array key.
-$sandwich['cheese'];
-// Object property.
-$sandwich->cheese;
-// Also works for magic get (provided you implement magic isset).
-$sandwich->__isset('cheese'); && $sandwich->__get('cheese');
-// Object method.
-$sandwich->cheese();
-// Object get method convention.
-$sandwich->getCheese();
-// Object is method convention.
-$sandwich->isCheese();
-// Method doesn't exist/dynamic method.
-$sandwich->__call('cheese');
-```
+>```twig
+>{{ sandwich.cheese }}   
+>```
 
+>```php
+>// Array key.
+>$sandwich['cheese'];
+>// Object property.
+>$sandwich->cheese;
+>// Also works for magic get (provided you implement magic isset).
+>$sandwich->__isset('cheese'); && $sandwich->__get('cheese');
+>// Object method.
+>$sandwich->cheese();
+>// Object get method convention.
+>$sandwich->getCheese();
+>// Object is method convention.
+>$sandwich->isCheese();
+>// Method doesn't exist/dynamic method.
+>$sandwich->__call('cheese');
+>```
 
 1. Spend a few moments trying to print out variables and their children.
 
-
-   
 ## Questions you may have...
 + What if I only want the body text without the surrounding markup?
 + Why do you keep telling me to delete my kint statements?

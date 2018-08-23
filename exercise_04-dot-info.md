@@ -59,51 +59,47 @@ As long as you have your .info.yml file in place with a few keys in place, you h
 >## Things we might find in a .info.yml file
 The following keys are items that we will often find in a `*.info.yml` file. Some are optional; some are required. These keys provide metadata about your theme and define some of the basic functionality.
 
->1. `name` **Required** 
+>`name` **Required** 
 The human-readable name will appear on the Appearance page, where you can activate your theme.
+>
+>`description` **Required** The description is displayed on the Appearance page.
+>
+>`type` **Required** The type key indicates the type of extension, e.g., module, theme or profile. For themes this should always be set to `theme`.
+>    
+>`base theme` The theme can inherit the resources from another theme by defining it as a base theme. Not declaring this, will default to using "Stable" as the base theme.
+>   
+>`core` **Required** The core key specifies the version of Drupal core that your theme is compatible with.
+>    
+>`version` For modules hosted on drupal.org, the version number will be filled in by the packaging script. You should not specify it manually, but leave out the version line entirely.
+>
+>`regions` Regions are declared as children of the regions key. You are required to have a content region. The regions we just declared are also the default regions that are enabled by core if you do not declare any regions in your .info.yml file. 
 
->2. `description` **Required** The description is displayed on the Appearance page.
-
->3. `type` **Required** The type key indicates the type of extension, e.g., module, theme or profile. For themes this should always be set to `theme`.
-    
->4. `base theme` The theme can inherit the resources from another theme by defining it as a base theme. Not declaring this, will default to using "Stable" as the base theme.
-    
->5. `core` **Required** The core key specifies the version of Drupal core that your theme is compatible with.
-    
->6. `version` For modules hosted on drupal.org, the version number will be filled in by the packaging script. You should not specify it manually, but leave out the version line entirely.
-
->7. `regions` Regions are declared as children of the regions key. You are required to have a content region. The regions we just declared are also the default regions that are enabled by core if you do not declare any regions in your .info.yml file. 
-
->### Other items
-1. `regions_hidden` will allow you to remove default regions from the output if you don't specifically declare any regions.
-
->1. `screenshot: IMAGE_NAME.png` With the screenshot key you define a screenshot that is shown on the Appearance page. If you do not define this key, then Drupal will look for a file named 'screenshot.png' or  'screenshot.svg' in the theme folder to display.
-    
->2. The `libraries` key can be used to add asset libraries to all pages where the theme is active.
-	
+### Other items
+>`regions_hidden` will allow you to remove default regions from the output if you don't specifically declare any regions.
+>
+>`screenshot: IMAGE_NAME.png` With the screenshot key you define a screenshot that is shown on the Appearance page. If you do not define this key, then Drupal will look for a file named 'screenshot.png' or  'screenshot.svg' in the theme folder to display.
+>   
+>`libraries` The libraries key can be used to add asset libraries to all pages where the theme is active. Theme libraries contain CSS and/or javascript. Theme libraries are declared in another type of YaML file (THEME.libraries.yml). We will cover libraries in later exercises.
+>	
 >   ```yml
 >	  libraries:
 >	      - THEMENAME/global-styling
 >	      - THEMENAME/LIBRARY-NAME
 >   ```
-
->Theme libraries contain CSS and/or javascript. Theme libraries are declared in another type of YaML file (THEME.libraries.yml). We will cover libraries in later exercises.
-
->3. The `libraries-override` and `libraries-extend` keys can be used to take control over the components of a library, remove items or the complete library, or add additional elements to a library.
-
->4. The `stylesheets-remove` key is used to stop the addition of CSS components for core and contrib modules. However, it is better to do this with `libraries-override`.
-
->	```
+>
+>`libraries-override` and `libraries-extend` keys can be used to take control over the components of a library, remove items or the complete library, or add additional elements to a library.
+>
+>`stylesheets-remove` key is used to stop the addition of CSS components for core and contrib modules. However, it is better to do this with `libraries-override`.
+>
+>```
 >	stylesheets-remove:
 >      - core/assets/vendor/normalize-css/normalize.css
 >      - '@classy/css/components/tabs.css'
 >	```
-	
->5. `ckeditor_stylesheets` will allow you to have custom ckeditor styles attached to your theme
-
->6. `quickedit_stylesheets` will allow you to have custom styles and javascript attached to the quickedit functionality
-
-
+>
+>`ckeditor_stylesheets` will allow you to have custom ckeditor styles attached to your theme
+>
+>`quickedit_stylesheets` will allow you to have custom styles and javascript attached to the quickedit functionality
 
 ## Questions you may have...
 + What happens if I don't declare any regions?

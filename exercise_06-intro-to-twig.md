@@ -13,6 +13,7 @@ Twig is a modern, advanced, templating language for PHP. Twig is also the new te
 There are 3 Basic Syntaxes of Twig. Mostly, we will use just 2 of them.
 
 ###The “Say Something” Syntax: {{ ... }}
+
 The double-curly-brace (`{{`) is always used to **print** something. If whatever you need to do will result in something being printed to the screen, then you’ll use this syntax. I call this the “say something” tag, because it’s how you “speak” in Twig.
 
 + Printing a variable
@@ -22,7 +23,8 @@ The double-curly-brace (`{{`) is always used to **print** something. If whatever
   ``` 
 
 ###The “Do Something” Syntax: {% ... %}
-The curly-percent (`{%`) is the other syntax, which I call the “do something” syntax. It’s used for things like **if** and **for** tags as well as other things that “do” something. There are only a handful of things that can be used inside of it. If you go to Twig’s website, click Documentation, and scroll down, you can see a full list of everything in Twig. The “tags” header shows you everything that can be used inside of a “do something” tag, with more details about how each of these works. The only ones you need to worry about now are **if** and **for**. We’ll talk about a bunch more of these later.
+
+The curly-percent (`{%`) is the other syntax, which we call the “do something” syntax. It’s used for things like **if** and **for** tags as well as other things that “do” something. There are only a handful of things that can be used inside of it. See [Twig’s documentation](https://twig.symfony.com/doc/2.x/) for all Twig functionality. Twig tags can be used inside of a “do something” statement. The only ones you need to worry about now are **if** and **for**. We’ll talk about a bunch more of these later.
 
 + Running a function (in this case, check if the variable 'logo' is set, if so print the logo)
 
@@ -41,7 +43,8 @@ The curly-percent (`{%`) is the other syntax, which I call the “do something�
   ```
 
 ###The Comment Syntax: {# ... #}
-Actually, There is a third syntax, used for comments: `{#`. Just like with the “say something” and “do something” syntaxes, write the opening {# and also the closing #} at the end of your comments:
+
+There is a third syntax, used for comments: `{#`. Just like with the “say something” and “do something” syntaxes, write the opening {# and also the closing #} at the end of your comments:
 
 + An example comment
 

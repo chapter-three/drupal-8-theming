@@ -63,7 +63,7 @@ We are going to copy the default block twig template into our theme, rename it a
     -->
 	```
 	
-	These are the template suggestions for different components of the page. These come from our theme and twig debug enabling. Drupal is telling you exactly how you can name your new template files to make sure they affect that component. The `x` at the start of a name refers to the template that is currently being used to build that component. Items lower on the list override higher ones.
+	These are the template suggestions for different components of the page. These come from our theme and twig debug enabling. Drupal is telling you exactly how you can name your new template files to make sure they affect that component. The `x` at the start of a name refers to the template that is currently being used to build that component. Items higher on the list override lower ones.
 	
 6. So that it only affects the "Powered by Drupal" block, rename the `block.html.twig` file to `block--system-powered-by-block.html.twig`
 

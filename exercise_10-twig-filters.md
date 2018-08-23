@@ -10,7 +10,7 @@
 
 1. First, we want to get the node title as a string.
 
-2. Try `{{ kint(node) }}` in your theme's **node.html.twig** file. Under `Available methods` observe  `getTitle()`. It is a public function so we can use it in our twig template. 
+2. Try `{{ kint(node) }}` in your theme's **node.html.twig** file. Under `Available methods` observe  `label()`. It is a public function so we can use it in our twig template. 
 
 1. Near your other variable declaration in your theme's **node.html.twig** add:
 
@@ -33,7 +33,6 @@
 
 ## Questions you may have...
 + When should one use Twig filters instead of CSS or PHP?
-+ Why didn't you use node.title instead of node.label?
 
 ## Done ☺
 ¡No Pare! !Sigue! !Sigue! [Exercise 11 - Twig Blocks](exercise_11-twig-block.md)

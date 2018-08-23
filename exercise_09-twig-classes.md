@@ -75,7 +75,7 @@ Let's create a special body class for the user role.
 + What happened to preprocess functions and the template.php file?
 + Why do we copy our template files from the classy theme?
 + How did you know the `user` variable was available?
-
++ Why did we do that?
 
 
 ## Done ☺

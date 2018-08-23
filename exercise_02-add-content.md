@@ -45,7 +45,7 @@ The above process is fine for one or two items, but what if you need to test out
 
 1. Click "Configuration" in the Admin menu.
 2. In the `Development` group select `Generate content`.
-	1. Select "Content Type: `Article`
+	1. Select Content Types `Article` and `Basic Page`
 	2. How many nodes would you like to generate?: `25`
 	3. How far back in time should the nodes be dated?: `1 year`
 	4. (If comments enabled) Maximum number of comments per node: `5`
@@ -76,7 +76,7 @@ The above process is fine for one or two items, but what if you need to test out
 
 	
 ## Questions you may have...
-+ 
++ Can I generate content from the command line?
 
 ## Done ☺
 [Exercise 3 - Contrib Themes](exercise_03-contrib-themes.md) is next!

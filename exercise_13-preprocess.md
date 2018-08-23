@@ -32,11 +32,9 @@ What is a preprocess function? A preprocess function is a function that allows u
 4. Open up **page.html.twig** and near the closing footer element, print out our new variable using the following code:
 
     ```twig
-    {% if copyright %}
       <div class="copyright">
       {{ copyright }}
       </div>
-    {% endif %}
     ```
 3. Clear cache and verify your copyright is on the page.
 
@@ -59,11 +57,10 @@ Great, it’s printing our variable, but we’re still not much better off than 
 
 ##Questions you may have...
 + Where did you find that function name? I would never have guessed that.
-+ What would happen if I didn’t check if a variable is set before printing it?
 + Why don’t I close the PHP tags?
 + Why does the new variable have a t() function around it?
 + What’s the best way to add markup and styles to our variable?
-+ Could I have done all this on the twig template?
++ Could I have done this on the twig template?
  
 ##Done ☺
 [Exercise 14 - Template Suggestions](exercise_14-new-template-suggestions.md) is ready to bat.

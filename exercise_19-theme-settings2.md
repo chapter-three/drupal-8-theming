@@ -27,7 +27,7 @@ We have declared our copyright_holder in our theme's settings, and it will overr
 
 ## Questions you may have...
 + How can I get one of the default theme settings, like the logo?
-
++ What would steps are needed to makek the color switcher on the theme settings page do something?
 
 ## Done ☺
 

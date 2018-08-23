@@ -14,9 +14,9 @@ The biggest difference from Drupal 7 is when it comes to JavaScript loaded on pa
 
 The basic process breaks down into 3 steps
 
-1. Save the CSS or JS to a file.
-2. Define a "library" in a `*.libraries.yml` file, which contains a reference to the CSS and/or JS files.
-3. "Attach" the library to a render array in a hook using the `#attached` attribute, by including it in a template, or add the library as a dependency to the theme's `*.info.yml` file.
+>1. Save the CSS or JS to a file.
+>2. Define a "library" in a `*.libraries.yml` file, which contains a reference to the CSS and/or JS files.
+>3. "Attach" the library to a render array in a hook using the `#attached` attribute, by including it in a template, or add the library as a dependency to the theme's `*.info.yml` file.
 
 
 ## Create a library
@@ -106,7 +106,7 @@ In the following steps, we will create a libraries.yml file, declare our library
 	libraries:
 	  - acme/css-stuff
 	```
-10. Clear your caches and you should now see your css styles in place.
+10. [Clear cache](clear-cache.md) and you should now see your css styles in place.
 
     If everything worked, you should see output like the following in the head section in the source code on all pages of your theme.
 
@@ -198,20 +198,22 @@ If we are using a base theme, it is very possible that some CSS or javascript is
 
 **The following method is for removing individual CSS or javascript files**
 
-3. Take a look at the CSS that is being loaded on your site as a logged in user. Note that **/core/assets/vendor/jquery.ui/themes/base/dialog.css** and 
+1. Take a look at the CSS that is being loaded on your site as a logged in user. Note that **core/assets/vendor/jquery.ui/themes/base/core.css** and 
   **/core/themes/classy/css/components/breadcrumb.css** are being loaded.
 
-1. Navigate to your theme root and open the **acme.info.yml** file.
+2. Navigate to your theme root and open the **acme.info.yml** file.
 
-4. Place the following code in your **acme.info.yml** file.
+3. Place the following code in your **acme.info.yml** file.
 
 	```
    stylesheets-remove:
-      - core/misc/active-links.css
+      - core/assets/vendor/jquery.ui/themes/base/core.css
       - '@classy/css/components/breadcrumb.css'
 	```
 	
 	In this example, we are removing the extra CSS file that core tries to add with one of its JQuery libraries. We are also removing a stylesheet from our parent (base) theme, classy. You probably notice the `@` symbol at the start of the third line. This is a placeholder token. @classy, or @node, or @whatever is the equivalent to `drupal_get_path()` in Drupal 7. Note that `stylesheets-remove` is technically deprecated and will be removed in Drupal 9.
+
+4. [Clear cache](clear-cache.md)
 
 
 ### Overriding CSS or javascript
@@ -220,42 +222,42 @@ Sometimes we don't want to remove a file or a library, but we do have a better f
 
 Note: The methods for modifying libraries have changed during the development of Drupal 8. Check [Drupal.org's Theming Guide](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme#override-extend) for the latest documentation.
 
-> **This code is just for show.**
+**This code is just for show.**
 
 >```
 >libraries-override:
 >  # Replace an entire library.
 >  core/drupal.collapse: mytheme/collapse
-  
+>  
 >  # Replace an asset with another.
 >  subtheme/library:
 >    css:
 >      theme:
 >        css/layout.css: css/my-layout.css
-
+>
 >  # Replace a core module JavaScript asset.
 >  toolbar/toolbar:
 >    js:
 >      js/views/BodyVisualView.js: js/views/BodyVisualView.js
-
+>
 >  # Remove an asset.
 >  drupal/dialog:
 >    css:
 >      theme:
 >        dialog.theme.css: false
-  
+>  
 >  # Remove an entire library.
 >  core/modernizr: false  			
 >```
-
+>
 > **Libraries Extend Example**
-  		
+>  		
 > ```
 > # Extend drupal.user: add assets from classy's user libraries.
 > libraries-extend:
->  core/drupal.user: 
->    - classy/user1
->    - classy/user2
+>   core/drupal.user: 
+>     - classy/user1
+>     - classy/user2
 >```
 
 ## Questions you may have...
