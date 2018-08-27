@@ -13,7 +13,7 @@ If you run into problems, check the theme's issue queue and search the forums. I
 
 ## Install our first contrib...
 1. Download and add the latest recommended release of *Radix*:  http://drupal.org/project/radix 
-Please take a quick look at the [readme]README.md if you are using Lando
+
     `$ composer require drupal/radix`
 
 2. Also, download and add the latest recommended release of the *Mayo* theme: https://www.drupal.org/project/mayo
