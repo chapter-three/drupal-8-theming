@@ -21,7 +21,7 @@ The basic process breaks down into 3 steps
 
 ## Create a library
 	
-In the following steps, we will create a libraries.yml file, declare our library some CSS files and create the CSS files in out theme.
+In the following steps, we will create a libraries.yml file, declare our library some CSS files and create the CSS files in our theme.
 
 1. Navigate to your theme's root directory 
 
