@@ -26,7 +26,7 @@ The double-curly-brace (`{{`) is always used to **print** something. If whatever
 
 The curly-percent (`{%`) is the other syntax, which we call the “do something” syntax. It’s used for things like **if** and **for** tags as well as other things that “do” something. There are only a handful of things that can be used inside of it. See [Twig’s documentation](https://twig.symfony.com/doc/2.x/) for all Twig functionality. Twig tags can be used inside of a “do something” statement. The only ones you need to worry about now are **if** and **for**. We’ll talk about a bunch more of these later.
 
-+ Running a function (in this case, check if the variable 'logo' is set, if so print the logo)
++ Running a conditional check (in this case, check if the variable 'logo' is set, if so print the logo)
 
   ```twig
   {% if logo %}
@@ -34,7 +34,7 @@ The curly-percent (`{%`) is the other syntax, which we call the “do something�
   {% endif %}
   ```
 
-+ Runing a loop and print a value (in this case, for each product item in products array, it'll print out the product item content)
++ Running a loop and printing a value (in this case, for each product item in products array, it'll print out the product item content)
 
   ```twig
   {% for product in products %}
