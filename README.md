@@ -52,7 +52,7 @@ Along the way, we'll cover:
 
 ## Exercises
  
-[Exercise 1 - Local Setup](https://docs.google.com/document/d/1ilmBEeIJb_c3YQLroryZZBu3neMY4UdN_8AZCLTnvTw/edit#heading=h.s8eqm5cz2t56)
+[Exercise 1 - Local Setup](https://docs.google.com/document/d/1KZsdw7u4KoMo2HZqdWz-1gS8pDeV5JhWbIxGe-dt97g/edit?usp=sharing)
 
 [Exercise 2 - Add Content](exercise_02-add-content.md)
 
