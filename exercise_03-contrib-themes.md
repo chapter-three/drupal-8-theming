@@ -68,5 +68,5 @@ Remember if you're using Lando, `composer` becomes `lando composer`; please see 
 + How do I choose a theme?
 
 ## Done ☺
-Woo hoo! Time for [Exercise 4 - Dot Info File](exercise_04-dot-info.md)!
+Woo hoo! Time for [Exercise 4 - Dot Info File](exercise_04-dot-info.md)! :)
 
