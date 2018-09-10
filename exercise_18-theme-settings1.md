@@ -32,7 +32,7 @@ Often we need to create small, simple little settings for our theme that can mak
     
 6. Add the following code to that file.
 	
-	```php
+  ```php
   <?php
   
   function acme_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
@@ -57,7 +57,7 @@ Often we need to create small, simple little settings for our theme that can mak
       '#weight' => -10,
     ];
   }
-	```
+ ```
       
 7. Clear cache, then go to our **Appearance** page. Click on **Settings** for your custom theme. You should see two new options for the settings we added. 
 
