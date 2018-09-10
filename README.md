@@ -49,6 +49,59 @@ Along the way, we'll cover:
     * php.ini 
       - `'memory_limit' = '512M'`
 
+## Basic terminal commands used.
+
+Change Directory. 
+
+```cd ```
+
+Create File.
+
+```touch``` (`new-item` on Windows PowerShell)
+
+Create Folder.
+
+```mkdir```
+
+Move file from one location to another.
+
+```mv```
+
+Copy file to a new location.
+
+```cp``` (`copy` on Windows PowerShell)
+
+
+## Final Folder Structure
+
+```
+MYDRUPAL/themes/custom
+                    └── acme
+                        ├── acme.breakpoints.yml
+                        ├── acme.info.yml
+                        ├── acme.libraries.yml
+                        ├── acme.settings.yml
+                        ├── acme.theme
+                        ├── css
+                        │   ├── css-stuff-print.css
+                        │   ├── css-stuff.css
+                        │   └── custom-widget.css
+                        ├── images
+                        │   └── mysvg.svg
+                        ├── js
+                        │   └── custom-widget.js
+                        ├── templates
+                        │   ├── block
+                        │   │   └── block--system-powered-by-block.html.twig
+                        │   ├── html
+                        │   │   └── html.html.twig
+                        │   ├── node
+                        │   │   └── node.html.twig
+                        │   └── page
+                        │       └── page.html.twig
+                        └── theme-settings.php
+```
+
 
 ## Exercises
  
@@ -107,59 +160,6 @@ Along the way, we'll cover:
 
 ###### Url
 *http://MYDRUPAL/admin/config*
-
-## Basic terminal commands used.
-
-Change Directory. 
-
-```cd ```  
-
-Create File.
-
-```touch```
-
-Create Folder.
-
-```mkdir```
-
-Move file from one location to another.
-
-```mv```
-
-Copy file to a new location.
-
-```cp```
-
-
-## Final Folder Structure
-
-```
-MYDRUPAL/themes/custom
-                    └── acme
-                        ├── acme.breakpoints.yml
-                        ├── acme.info.yml
-                        ├── acme.libraries.yml
-                        ├── acme.settings.yml
-                        ├── acme.theme
-                        ├── css
-                        │   ├── css-stuff-print.css
-                        │   ├── css-stuff.css
-                        │   └── custom-widget.css
-                        ├── images
-                        │   └── mysvg.svg
-                        ├── js
-                        │   └── custom-widget.js
-                        ├── templates
-                        │   ├── block
-                        │   │   └── block--system-powered-by-block.html.twig
-                        │   ├── html
-                        │   │   └── html.html.twig
-                        │   ├── node
-                        │   │   └── node.html.twig
-                        │   └── page
-                        │       └── page.html.twig
-                        └── theme-settings.php
-```
 
 
 ## Done ☺
