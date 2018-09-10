@@ -16,7 +16,7 @@ You can easily create one or two items of content in Drupal, but what if you nee
 	3. Click the **Generate** button.
 3. Click "Configuration" in the Admin menu
 4. In the `Development` group select `Generate terms`.
-	1. Vocabularies: **Select any one vocabulary**
+	1. Vocabularies: **Select "Tags" and one other vocabulary**
 	2. Number of terms?: `10`
 	2. Maximum number of characters in vocabulary names: `15`
 	3. Click the **Generate** button.
