@@ -2,7 +2,7 @@
 
 # Exercise 7: 
 
-## Adding a new region (Let's use Twig)
+## Adding a new region
 
 The client wants a new region for special messages at the top of the footer, so we’ll give them a new region called `Footer top`. Eventually, it would be great to style this region to look a little nicer, but for now, lets just put the content in place.
 

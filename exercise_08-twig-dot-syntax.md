@@ -12,7 +12,7 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 
 2. Go to an Article node page.
 
-3. Inspect the content variable. Note that body and field_image are available.
+3. Inspect the content variable. Note that body, field_tags, and field_image are available.
 
     _Make sure your [php memory limit](https://www.drupal.org/docs/7/managing-site-performance-and-scalability/changing-php-memory-limits) is high (>= 256), or you may see a white screen of death._
 
