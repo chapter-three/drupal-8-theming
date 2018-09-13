@@ -23,7 +23,7 @@ You can use an svg on your machine or the example below.
 
 ```svg
 <svg>
-  <rect x="10" y="10" height="100" width="100"style="stroke:#ff0000; fill: #0000ff"/>
+  <rect x="10" y="10" height="100" width="100" style="stroke:#ff0000; fill: #0000ff"/>
 </svg>
 ```
    
