@@ -14,7 +14,7 @@ If you run into problems, check the theme's issue queue and search the forums. I
 ## Install our first contrib...
 1. Download and add the latest recommended release of *Radix*:  http://drupal.org/project/radix 
 
-Remember if you're using Lando, `composer` becomes `lando composer`; please see the [README](https://github.com/chapter-three/drupal-8-theming/blob/master/README.md) for more details
+    Remember if you're using Lando, `composer` becomes `lando composer`; please see the [README](https://github.com/chapter-three/drupal-8-theming/blob/master/README.md) for more details
 
     `$ composer require drupal/radix`
 
