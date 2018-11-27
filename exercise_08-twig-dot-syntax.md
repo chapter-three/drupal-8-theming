@@ -8,7 +8,7 @@ Look at the comments at the top of the **node.html.twig** template. The comments
 
 ### Use `kint()` to inspect the content variable.
 
-1. Add `{{ kint(content) }}` to the bottom of your **node.twig.html** field.
+1. Add `{{ kint(content) }}` to the bottom of your **node.html.twig** field.
 
 2. Go to an Article node page.
 
